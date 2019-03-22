@@ -12,5 +12,5 @@ railg g model Category name:string service:references
 
 rails g model UserService user:references service:references
 
-rails g Contract date:date completed:boolean observations:varchar payment:references user:references service:references end_time:time start_time:time
+rails g Contract date:date completed:boolean observations:string payment:references user:references service:references end_time:time start_time:time
 
