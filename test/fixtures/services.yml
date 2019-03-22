@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  title: MyString
+  price: 9.99
+  day_first: 2019-03-22 18:17:07
+  day_last: 2019-03-22 18:17:07
+  hour_first: 2019-03-22 18:17:07
+  hour_last: 2019-03-22 18:17:07
+
+two:
+  description: MyText
+  title: MyString
+  price: 9.99
+  day_first: 2019-03-22 18:17:07
+  day_last: 2019-03-22 18:17:07
+  hour_first: 2019-03-22 18:17:07
+  hour_last: 2019-03-22 18:17:07

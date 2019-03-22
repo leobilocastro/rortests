@@ -1,0 +1,16 @@
+rails g model user full_name:string email:string:pri gender:string date_of_birth:date cpf:string rg:string role:integer
+
+rails g model Address street_name:string number:string
+neighborhood:string zip_code:string additional_info:string
+user:references
+
+rails g model Service  description:text title:string price:decimal day_first:time day_last:time  hour_first:time hour_last:time
+
+rails g model payment approved:boolean
+
+railg g model Category name:string service:references
+
+rails g model UserService user:references service:references
+
+rails g Contract date:date completed:boolean observations:varchar payment:references user:references service:references end_time:time start_time:time
+
