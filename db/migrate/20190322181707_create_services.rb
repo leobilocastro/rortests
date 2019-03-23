@@ -8,7 +8,7 @@ class CreateServices < ActiveRecord::Migration[5.0]
       t.time :day_last
       t.time :hour_first
       t.time :hour_last
-
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end

@@ -73,17 +73,10 @@ ActiveRecord::Schema.define(version: 20190322203145) do
     t.time     "day_last"
     t.time     "hour_first"
     t.time     "hour_last"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "user_services", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "service_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["service_id"], name: "index_user_services_on_service_id", using: :btree
-    t.index ["user_id"], name: "index_user_services_on_user_id", using: :btree
+    t.index ["user_id"], name: "index_services_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -109,6 +102,5 @@ ActiveRecord::Schema.define(version: 20190322203145) do
   add_foreign_key "contracts", "services"
   add_foreign_key "contracts", "users"
   add_foreign_key "phones", "users"
-  add_foreign_key "user_services", "services"
-  add_foreign_key "user_services", "users"
+  add_foreign_key "services", "users"
 end

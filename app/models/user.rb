@@ -3,8 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-    has_many :services, through: :contracts
-    has_many :services, through: :user_services
+    
+    enum role: [:client, :admin]
+    enum gender: [:male, :female]
     has_one :address
     has_many :phones
+    has_many :services
 end
