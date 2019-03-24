@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
     
-    enum role: [:client, :admin]
+    enum role: [client: 0 , admin: 1]
     enum gender: [:male, :female]
     has_one :address
     has_many :phones

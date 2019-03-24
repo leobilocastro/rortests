@@ -23,9 +23,39 @@ pt-BR:
         one: Pagamento
         other: Pagamentos
     attributes:
-      client:
-        name: "Nome"
-        company_name: "Nome da Empresa"
+      user:
+        full_name: Nome completo
+        gender: Sexo
+        date_of_birth: Data de nascimento
+        cpf: CPF
+        role: Papel
+        email: E-mail 
+      address:
+        street_name: Rua
+        number: Numero
+        neighborhood: Bairro 
+        zip_code: CEP
+        additional_info: Logradouro
+      service:
+        description: Descrição
+        title: Titulo
+        price: Valor 
+        day_first: Dia inicial  
+        day_last: Dia  final 
+        hour_first: Hora inicial
+        hour_last: Hora final
+      payment: 
+        approved: Aprovado
+      category:
+        name: Nome
+      contract:
+        date: Data  
+        completed: Finalizado 
+        observations: Observações 
+        end_time: Hora de finalização
+        start_time: Hora de início
+      phone:
+        number: Telefone para contato
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
