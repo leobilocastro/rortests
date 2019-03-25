@@ -109,10 +109,17 @@ RailsAdmin.config do |config|
         required true
       end
     end
+    configure :categories do
+      hide
+    end
+    configure :classifyings do
+      hide
+    end
   end
 
   config.model  Classifying do
     visible false
+
   end
   config.model Category do
     visible false

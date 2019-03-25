@@ -26374,3 +26374,977 @@ Processing by RailsAdmin::MainController#show as HTML
 Completed 200 OK in 38ms (Views: 24.8ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/admin" for 172.21.0.1 at 2019-03-25 04:20:58 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (8.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /proj01/app/controllers/application_controller.rb:4)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:108)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:108)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:99)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:99)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:99)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:99)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "contracts"[0m
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" ORDER BY "contracts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "payments"[0m
+  [1m[36mPayment Load (0.6ms)[0m  [1m[34mSELECT  "payments".* FROM "payments" ORDER BY "payments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT  "services".* FROM "services" ORDER BY "services"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (57.7ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.7ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (15.9ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.1ms)
+  Rendering /box/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /box/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (5.9ms)
+Completed 200 OK in 1705ms (Views: 864.1ms | ActiveRecord: 39.0ms)
+
+
+Started GET "/admin/contract?_pjax=%5Bdata-pjax-container%5D" for 172.21.0.1 at 2019-03-25 04:21:06 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"contract"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mContract Load (0.7ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" ORDER BY contracts.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (75.0ms)
+Completed 200 OK in 126ms (Views: 97.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/contract/export?_pjax=%5Bdata-pjax-container%5D" for 172.21.0.1 at 2019-03-25 04:21:08 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"contract"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/pjax
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT ''::text AS str;[0m
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/pjax (46.0ms)
+Completed 200 OK in 94ms (Views: 78.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/contract/new?_pjax=%5Bdata-pjax-container%5D" for 172.21.0.1 at 2019-03-25 04:21:08 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"contract"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (5.2ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_boolean.html.haml (6.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (3.3ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc[0m
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_filtering_select.html.haml (19.3ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" ORDER BY services.id desc[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_filtering_select.html.haml (11.9ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (15.7ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (95.0ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `classifyings' for #<Contract:0x00007fd7cc033ee0>
+If you want to use a RailsAdmin virtual field(= a field without corresponding instance method),
+you should declare 'formatted_value' in the field definition.
+  field :classifyings do
+    formatted_value{ bindings[:object].call_some_method }
+  end
+):
+    1: = form.send field.view_helper, field.method_name, field.html_attributes.reverse_merge({ value: field.form_value, class: 'form-control', required: field.required})
+  
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:280:in `rescue in value'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:277:in `value'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:328:in `form_default_value'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:332:in `form_value'
+rails_admin (1.4.2) app/views/rails_admin/main/_form_field.html.haml:1:in `__box_gems_rails_admin_______app_views_rails_admin_main__form_field_html_haml___3179880678646235857_70282409299720'
+actionview (5.0.7.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/partial_renderer.rb:343:in `render_partial'
+actionview (5.0.7.2) lib/action_view/renderer/partial_renderer.rb:311:in `block in render'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:21:in `render'
+actionview (5.0.7.2) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:12:in `block in render'
+haml (5.0.4) lib/haml/helpers.rb:92:in `non_haml'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:12:in `render'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:227:in `block in <class:Base>'
+rails_admin (1.4.2) lib/rails_admin/config/configurable.rb:66:in `instance_eval'
+rails_admin (1.4.2) lib/rails_admin/config/configurable.rb:66:in `block in register_instance_option'
+rails_admin (1.4.2) lib/rails_admin/config/proxyable/proxy.rb:27:in `method_missing'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:73:in `field_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:58:in `block in input_for'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `block in capture'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:203:in `with_output_buffer'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:6:in `with_output_buffer_with_haml_xss'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `capture'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:47:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/tag_helper.rb:107:in `content_tag'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:66:in `content_tag_with_haml'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:57:in `input_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:46:in `block in field_wrapper_for'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `block in capture'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:203:in `with_output_buffer'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:6:in `with_output_buffer_with_haml_xss'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `capture'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:47:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/tag_helper.rb:107:in `content_tag'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:66:in `content_tag_with_haml'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:44:in `field_wrapper_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:35:in `block (2 levels) in fieldset_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:35:in `collect'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:35:in `block in fieldset_for'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `block in capture'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:203:in `with_output_buffer'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:6:in `with_output_buffer_with_haml_xss'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `capture'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:47:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/tag_helper.rb:107:in `content_tag'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:66:in `content_tag_with_haml'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:31:in `fieldset_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:16:in `block (2 levels) in generate'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:15:in `collect'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:15:in `block in generate'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:131:in `without_field_error_proc_added_div'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:7:in `generate'
+rails_admin (1.4.2) app/views/rails_admin/main/new.html.haml:2:in `block in __box_gems_rails_admin_______app_views_rails_admin_main_new_html_haml__283629987457046767_70282487636060'
+haml (5.0.4) lib/haml/helpers.rb:382:in `block in capture_haml'
+haml (5.0.4) lib/haml/helpers.rb:667:in `with_haml_buffer'
+haml (5.0.4) lib/haml/helpers.rb:378:in `capture_haml'
+haml (5.0.4) lib/haml/helpers/xss_mods.rb:62:in `capture_haml_with_haml_xss'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:45:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/form_helper.rb:450:in `form_for'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:29:in `form_for_with_haml_xss'
+rails_admin (1.4.2) app/helpers/rails_admin/main_helper.rb:9:in `rails_admin_form_for'
+rails_admin (1.4.2) app/views/rails_admin/main/new.html.haml:1:in `__box_gems_rails_admin_______app_views_rails_admin_main_new_html_haml__283629987457046767_70282487636060'
+actionview (5.0.7.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.7.2) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.7.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.7.2) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.7.2) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.7.2) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.7.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/usr/local/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.7.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.7.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+remotipart (1.4.2) lib/remotipart/render_overrides.rb:16:in `render_with_remotipart'
+rails_admin (1.4.2) lib/rails_admin/config/actions/new.rb:28:in `block (4 levels) in <class:New>'
+actionpack (5.0.7.2) lib/action_controller/metal/mime_responds.rb:201:in `respond_to'
+rails_admin (1.4.2) lib/rails_admin/config/actions/new.rb:27:in `block (2 levels) in <class:New>'
+rails_admin (1.4.2) app/controllers/rails_admin/main_controller.rb:22:in `instance_eval'
+rails_admin (1.4.2) app/controllers/rails_admin/main_controller.rb:22:in `new'
+actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.2) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.2) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb
+  Rendering /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.3ms)
+  Rendering /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.4ms)
+  Rendered /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (17.5ms)
+Started GET "/admin/contract/new" for 172.21.0.1 at 2019-03-25 04:21:09 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"model_name"=>"contract"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (3.9ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_boolean.html.haml (3.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (2.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc[0m
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_filtering_select.html.haml (11.5ms)
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services" ORDER BY services.id desc[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_filtering_select.html.haml (7.9ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (17.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (77.3ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `classifyings' for #<Contract:0x000055fcf07fe638>
+If you want to use a RailsAdmin virtual field(= a field without corresponding instance method),
+you should declare 'formatted_value' in the field definition.
+  field :classifyings do
+    formatted_value{ bindings[:object].call_some_method }
+  end
+):
+    1: = form.send field.view_helper, field.method_name, field.html_attributes.reverse_merge({ value: field.form_value, class: 'form-control', required: field.required})
+  
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:280:in `rescue in value'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:277:in `value'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:328:in `form_default_value'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:332:in `form_value'
+rails_admin (1.4.2) app/views/rails_admin/main/_form_field.html.haml:1:in `__box_gems_rails_admin_______app_views_rails_admin_main__form_field_html_haml___3179880678646235857_70282421722580'
+actionview (5.0.7.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/partial_renderer.rb:343:in `render_partial'
+actionview (5.0.7.2) lib/action_view/renderer/partial_renderer.rb:311:in `block in render'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:21:in `render'
+actionview (5.0.7.2) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:12:in `block in render'
+haml (5.0.4) lib/haml/helpers.rb:92:in `non_haml'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:12:in `render'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:227:in `block in <class:Base>'
+rails_admin (1.4.2) lib/rails_admin/config/configurable.rb:66:in `instance_eval'
+rails_admin (1.4.2) lib/rails_admin/config/configurable.rb:66:in `block in register_instance_option'
+rails_admin (1.4.2) lib/rails_admin/config/proxyable/proxy.rb:27:in `method_missing'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:73:in `field_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:58:in `block in input_for'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `block in capture'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:203:in `with_output_buffer'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:6:in `with_output_buffer_with_haml_xss'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `capture'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:47:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/tag_helper.rb:107:in `content_tag'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:66:in `content_tag_with_haml'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:57:in `input_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:46:in `block in field_wrapper_for'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `block in capture'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:203:in `with_output_buffer'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:6:in `with_output_buffer_with_haml_xss'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `capture'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:47:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/tag_helper.rb:107:in `content_tag'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:66:in `content_tag_with_haml'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:44:in `field_wrapper_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:35:in `block (2 levels) in fieldset_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:35:in `collect'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:35:in `block in fieldset_for'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `block in capture'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:203:in `with_output_buffer'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:6:in `with_output_buffer_with_haml_xss'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `capture'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:47:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/tag_helper.rb:107:in `content_tag'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:66:in `content_tag_with_haml'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:31:in `fieldset_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:16:in `block (2 levels) in generate'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:15:in `collect'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:15:in `block in generate'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:131:in `without_field_error_proc_added_div'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:7:in `generate'
+rails_admin (1.4.2) app/views/rails_admin/main/new.html.haml:2:in `block in __box_gems_rails_admin_______app_views_rails_admin_main_new_html_haml__283629987457046767_47272427446340'
+haml (5.0.4) lib/haml/helpers.rb:382:in `block in capture_haml'
+haml (5.0.4) lib/haml/helpers.rb:667:in `with_haml_buffer'
+haml (5.0.4) lib/haml/helpers.rb:378:in `capture_haml'
+haml (5.0.4) lib/haml/helpers/xss_mods.rb:62:in `capture_haml_with_haml_xss'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:45:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/form_helper.rb:450:in `form_for'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:29:in `form_for_with_haml_xss'
+rails_admin (1.4.2) app/helpers/rails_admin/main_helper.rb:9:in `rails_admin_form_for'
+rails_admin (1.4.2) app/views/rails_admin/main/new.html.haml:1:in `__box_gems_rails_admin_______app_views_rails_admin_main_new_html_haml__283629987457046767_47272427446340'
+actionview (5.0.7.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.7.2) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.7.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.7.2) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.7.2) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.7.2) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.7.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/usr/local/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.7.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.7.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+remotipart (1.4.2) lib/remotipart/render_overrides.rb:16:in `render_with_remotipart'
+rails_admin (1.4.2) lib/rails_admin/config/actions/new.rb:28:in `block (4 levels) in <class:New>'
+actionpack (5.0.7.2) lib/action_controller/metal/mime_responds.rb:201:in `respond_to'
+rails_admin (1.4.2) lib/rails_admin/config/actions/new.rb:27:in `block (2 levels) in <class:New>'
+rails_admin (1.4.2) app/controllers/rails_admin/main_controller.rb:22:in `instance_eval'
+rails_admin (1.4.2) app/controllers/rails_admin/main_controller.rb:22:in `new'
+actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.2) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.2) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/contract/new?_pjax=%5Bdata-pjax-container%5D" for 172.21.0.1 at 2019-03-25 04:21:09 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"contract"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (4.5ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_boolean.html.haml (5.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (2.9ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc[0m
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_filtering_select.html.haml (12.5ms)
+  [1m[36mService Load (1.2ms)[0m  [1m[34mSELECT "services".* FROM "services" ORDER BY services.id desc[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_filtering_select.html.haml (12.6ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (14.7ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (83.2ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 4.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `classifyings' for #<Contract:0x00007fd7c808ba90>
+If you want to use a RailsAdmin virtual field(= a field without corresponding instance method),
+you should declare 'formatted_value' in the field definition.
+  field :classifyings do
+    formatted_value{ bindings[:object].call_some_method }
+  end
+):
+    1: = form.send field.view_helper, field.method_name, field.html_attributes.reverse_merge({ value: field.form_value, class: 'form-control', required: field.required})
+  
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:280:in `rescue in value'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:277:in `value'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:328:in `form_default_value'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:332:in `form_value'
+rails_admin (1.4.2) app/views/rails_admin/main/_form_field.html.haml:1:in `__box_gems_rails_admin_______app_views_rails_admin_main__form_field_html_haml___3179880678646235857_70282505393000'
+actionview (5.0.7.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/partial_renderer.rb:343:in `render_partial'
+actionview (5.0.7.2) lib/action_view/renderer/partial_renderer.rb:311:in `block in render'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:21:in `render'
+actionview (5.0.7.2) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:12:in `block in render'
+haml (5.0.4) lib/haml/helpers.rb:92:in `non_haml'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:12:in `render'
+rails_admin (1.4.2) lib/rails_admin/config/fields/base.rb:227:in `block in <class:Base>'
+rails_admin (1.4.2) lib/rails_admin/config/configurable.rb:66:in `instance_eval'
+rails_admin (1.4.2) lib/rails_admin/config/configurable.rb:66:in `block in register_instance_option'
+rails_admin (1.4.2) lib/rails_admin/config/proxyable/proxy.rb:27:in `method_missing'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:73:in `field_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:58:in `block in input_for'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `block in capture'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:203:in `with_output_buffer'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:6:in `with_output_buffer_with_haml_xss'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `capture'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:47:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/tag_helper.rb:107:in `content_tag'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:66:in `content_tag_with_haml'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:57:in `input_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:46:in `block in field_wrapper_for'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `block in capture'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:203:in `with_output_buffer'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:6:in `with_output_buffer_with_haml_xss'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `capture'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:47:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/tag_helper.rb:107:in `content_tag'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:66:in `content_tag_with_haml'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:44:in `field_wrapper_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:35:in `block (2 levels) in fieldset_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:35:in `collect'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:35:in `block in fieldset_for'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `block in capture'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:203:in `with_output_buffer'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:6:in `with_output_buffer_with_haml_xss'
+actionview (5.0.7.2) lib/action_view/helpers/capture_helper.rb:39:in `capture'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:47:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/tag_helper.rb:107:in `content_tag'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:66:in `content_tag_with_haml'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:31:in `fieldset_for'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:16:in `block (2 levels) in generate'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:15:in `collect'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:15:in `block in generate'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:131:in `without_field_error_proc_added_div'
+rails_admin (1.4.2) app/helpers/rails_admin/form_builder.rb:7:in `generate'
+rails_admin (1.4.2) app/views/rails_admin/main/new.html.haml:2:in `block in __box_gems_rails_admin_______app_views_rails_admin_main_new_html_haml__283629987457046767_70282375333460'
+haml (5.0.4) lib/haml/helpers.rb:382:in `block in capture_haml'
+haml (5.0.4) lib/haml/helpers.rb:667:in `with_haml_buffer'
+haml (5.0.4) lib/haml/helpers.rb:378:in `capture_haml'
+haml (5.0.4) lib/haml/helpers/xss_mods.rb:62:in `capture_haml_with_haml_xss'
+haml (5.0.4) lib/haml/helpers/action_view_mods.rb:45:in `capture_with_haml'
+actionview (5.0.7.2) lib/action_view/helpers/form_helper.rb:450:in `form_for'
+haml (5.0.4) lib/haml/helpers/action_view_xss_mods.rb:29:in `form_for_with_haml_xss'
+rails_admin (1.4.2) app/helpers/rails_admin/main_helper.rb:9:in `rails_admin_form_for'
+rails_admin (1.4.2) app/views/rails_admin/main/new.html.haml:1:in `__box_gems_rails_admin_______app_views_rails_admin_main_new_html_haml__283629987457046767_70282375333460'
+actionview (5.0.7.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.7.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.7.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.7.2) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.7.2) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.7.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.7.2) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.7.2) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.7.2) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.7.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/usr/local/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.7.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.7.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+remotipart (1.4.2) lib/remotipart/render_overrides.rb:16:in `render_with_remotipart'
+rails_admin (1.4.2) lib/rails_admin/config/actions/new.rb:28:in `block (4 levels) in <class:New>'
+actionpack (5.0.7.2) lib/action_controller/metal/mime_responds.rb:201:in `respond_to'
+rails_admin (1.4.2) lib/rails_admin/config/actions/new.rb:27:in `block (2 levels) in <class:New>'
+rails_admin (1.4.2) app/controllers/rails_admin/main_controller.rb:22:in `instance_eval'
+rails_admin (1.4.2) app/controllers/rails_admin/main_controller.rb:22:in `new'
+actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+railties (5.0.7.2) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.7.2) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.7ms)
+  Rendering /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.4ms)
+  Rendering /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb
+  Rendering /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.6ms)
+  Rendering /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.4ms)
+  Rendered /box/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (20.7ms)
+Started GET "/admin/contract/new" for 172.21.0.1 at 2019-03-25 04:21:54 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"model_name"=>"contract"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:108)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:108)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /proj01/app/controllers/application_controller.rb:4)
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (12.0ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_boolean.html.haml (8.2ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (3.3ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc[0m
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_filtering_select.html.haml (29.8ms)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:99)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:99)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:99)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <top (required)> at /proj01/config/initializers/rails_admin.rb:99)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "services"[0m
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" ORDER BY services.id desc[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_filtering_select.html.haml (51.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (12.4ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (165.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (10.4ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (17.4ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (31.9ms)
+  Rendering /box/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /box/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (14.4ms)
+Completed 200 OK in 1555ms (Views: 941.1ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/admin/payment?_pjax=%5Bdata-pjax-container%5D" for 172.21.0.1 at 2019-03-25 04:22:00 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"payment"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPayment Load (0.8ms)[0m  [1m[34mSELECT  "payments".* FROM "payments" ORDER BY payments.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (60.2ms)
+Completed 200 OK in 104ms (Views: 74.5ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/admin/service?_pjax=%5Bdata-pjax-container%5D" for 172.21.0.1 at 2019-03-25 04:22:01 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"service"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mService Load (0.8ms)[0m  [1m[34mSELECT  "services".* FROM "services" ORDER BY services.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (63.7ms)
+Completed 200 OK in 93ms (Views: 79.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 172.21.0.1 at 2019-03-25 04:22:02 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPhone Load (5.9ms)[0m  [1m[34mSELECT "phones".* FROM "phones" WHERE "phones"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (72.4ms)
+Completed 200 OK in 104ms (Views: 82.2ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/admin/user/new?_pjax=%5Bdata-pjax-container%5D" for 172.21.0.1 at 2019-03-25 04:22:06 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (2.1ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_enumeration.html.haml (3.2ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (3.5ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "phones"[0m
+  [1m[36mPhone Load (0.5ms)[0m  [1m[34mSELECT "phones".* FROM "phones" ORDER BY phones.id desc[0m
+  Rendered /box/gems/rails_admin_simple_has_many-0.0.5/app/views/rails_admin/main/_form_simple_has_many.html.haml (28.7ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (1.2ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_enumeration.html.haml (0.5ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_nested_one.html.haml (22.4ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (9.8ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /box/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (130.2ms)
+Completed 200 OK in 159ms (Views: 141.2ms | ActiveRecord: 6.0ms)
+
+
