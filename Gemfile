@@ -8,6 +8,7 @@ end
 #gem especias para o projeto
 gem 'rails_admin', '~> 1.3'
 gem 'devise' 
+gem "rails_admin_simple_has_many"
 
 
 

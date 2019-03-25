@@ -30,6 +30,9 @@ pt-BR:
         cpf: CPF
         role: Papel
         email: E-mail 
+        address: Endereço
+        phones: Telefones
+        phone: Telefone
       address:
         street_name: Rua
         number: Numero
@@ -44,6 +47,7 @@ pt-BR:
         day_last: Dia  final 
         hour_first: Hora inicial
         hour_last: Hora final
+        user: Usuário responsável
       payment: 
         approved: Aprovado
       category:
@@ -54,6 +58,8 @@ pt-BR:
         observations: Observações 
         end_time: Hora de finalização
         start_time: Hora de início
+        user: Usuário contratante
+        service: Serviço contratado
       phone:
         number: Telefone para contato
     errors:
@@ -372,7 +378,7 @@ pt-BR:
     form:
       cancel: "Cancelar"
       basic_info: "Informação Básica"
-      required: "Obrigatórios"
+      required: "Obrigatório"
       optional: "Opcional"
       one_char: "caracter"
       char_length_up_to: "comprimento até"
