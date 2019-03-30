@@ -23,11 +23,11 @@ class Main extends React.Component {
                         <div className="row">
                             <div className="col-lg-12">
                                <div className="intro-message">
-                                 <h3>Contrate ou ofereça serviços</h3>
+                                 <h2 style={{color: 'white'}}>Contrate ou ofereça serviços</h2>
                                     <ul>
-                                        <li style={ilside}><a href="/#foo" className="btn btn-default btn-lg"> <span style={{backgroundColor: 'yellow', fontSize: 1.35 + "em"}} className="network-name text-black">OFERECER SERVIÇO</span></a>
+                                        <li style={ilside}><a href="/#foo" className="btn btn-default btn-lg"> <span style={{backgroundColor: 'yellow', fontSize: 1.55 + "em"}} className="network-name text-black">OFERECER SERVIÇO</span></a>
                                         </li>
-                                        <li style={ilside}><a href="/#foo" className="btn btn-default btn-lg"> <span style={{backgroundColor: 'yellow',fontSize: 1.35 + "em"}} className="network-name text-black">CONTRATAR SERVIÇO</span></a>
+                                        <li style={ilside}><a href="/#foo" className="btn btn-default btn-lg"> <span style={{backgroundColor: 'yellow',fontSize: 1.55 + "em"}} className="network-name text-black">CONTRATAR SERVIÇO</span></a>
                                         </li>
                                         
                                     </ul>

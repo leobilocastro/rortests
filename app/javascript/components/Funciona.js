@@ -30,10 +30,10 @@ class Funciona extends React.Component{
     render(){
         return (
            <React.Fragment>
-            <div>
-             <h1>Pagina de como funciona</h1>
+            <div style={{height: '375px', marginTop:'5px'}}>
+             <h1 >Pagina de como funciona</h1>
             </div>
-            <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+            <h2>It is {this.state.date.toLocaleTimeString()}</h2>
            </React.Fragment>
         )
     }

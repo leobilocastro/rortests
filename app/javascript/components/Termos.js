@@ -30,7 +30,7 @@ class Termos extends React.Component{
     render(){
         return (
            <React.Fragment>
-            <div>
+            <div style={{height: '375px', marginTop:'5px'}}>
              <h1>Pagina Termos</h1>
             </div>
             <h2>It is {this.state.date.toLocaleTimeString()}</h2>

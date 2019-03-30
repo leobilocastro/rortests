@@ -25,20 +25,7 @@ img {max-width: 100%;width: auto\9;height: auto;vertical-align: middle;border: 0
 }
 button, input, select, textarea {margin: 0;font-size: 100%;vertical-align: middle
 }
-h1, h2, h3, h4, h5, h6 {font-weight: 700;line-height: normal;margin: 0 0 15px;
-}
-h1 {font-size: 15px;margin-bottom: 0;
-}
-h2 {font-size: 14px;
-}
-h3 {font-size: 13px;
-}
-h4 {font-size: 12p;
-}
-h5 {font-size: 14px;
-}
-h6 {font-size: 13px;
-}
+
 p {margin-bottom: 15px;
 }
 ul, li {margin: 0;padding: 0;list-style: none;
@@ -478,24 +465,6 @@ h4 em {font-size: 11px;display: block;font-style: normal;margin: 5px 0 0;font-we
 .footer-links li {display: inline-block;margin: 0 2px 0 0;
 }
 /*Toggle Menu*/
-#nav-toggle {cursor: pointer;position: absolute;right: 45px;top: 15px;
-}
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {cursor: pointer;border-radius: 1px;height: 5px;width: 35px;background: white;position: absolute;display: block;content: '';
-}
-#nav-toggle span:before {top: -10px;
-}
-#nav-toggle span:after {bottom: -10px;
-}
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {transition: all 500ms ease-in-out;
-}
-#nav-toggle.active span {background-color: transparent;
-}
-#nav-toggle.active span:before, #nav-toggle.active span:after {top: 0;
-}
-#nav-toggle.active span:before {transform: rotate(45deg);
-}
-#nav-toggle.active span:after {transform: rotate(-45deg);
-}
 #main_header.container {position: relative; 
 }
 /*reset file*/
