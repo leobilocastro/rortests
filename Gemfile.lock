@@ -70,6 +70,7 @@ GEM
       tilt
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
+    ice_cube (0.16.3)
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -163,6 +164,12 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    recurring_select (2.1.0)
+      coffee-rails (>= 3.1)
+      ice_cube (>= 0.11)
+      jquery-rails (>= 3.0)
+      rails (>= 3.2)
+      sass-rails (>= 4.0)
     remotipart (1.4.2)
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
@@ -178,6 +185,8 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    simple_calendar (2.3.0)
+      rails (>= 3.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -219,6 +228,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  ice_cube (~> 0.16.3)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -227,7 +237,9 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails_admin (~> 1.3)
   rails_admin_simple_has_many
+  recurring_select (~> 2.1)
   sass-rails (~> 5.0)
+  simple_calendar (~> 2.3)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

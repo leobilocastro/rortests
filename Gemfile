@@ -9,6 +9,9 @@ end
 gem 'rails_admin', '~> 1.3'
 gem 'devise' 
 gem "rails_admin_simple_has_many"
+gem 'recurring_select', '~> 2.1'
+gem 'ice_cube', '~> 0.16.3'
+gem 'simple_calendar', '~> 2.3'
 
 
 
