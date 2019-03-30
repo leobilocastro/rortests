@@ -59,6 +59,7 @@ RailsAdmin.config do |config|
     end
      field :address 
     end
+
     edit do
       field :full_name do
         required true
@@ -80,54 +81,5 @@ RailsAdmin.config do |config|
         nested_form false
       end 
      end
-  end
-
-
-  config.model Address do
-    visible false
-    configure :user do
-      hide
-    end
-  end
-
-  config.model Phone do
-    visible false
-  end
-
-  config.model Service do
-    [:title, :price].each do |sym|
-      configure sym.to_sym do
-        required true
-      end
-    end
-
-  end
-
-  config.model Contract do
-    [:user, :service, :date, :start_time,:end_time, :classifyings].each do |sym|
-      configure sym.to_sym do
-        required true
-      end
-    end
-    configure :categories do
-      hide
-    end
-    configure :classifyings do
-      hide
-    end
-  end
-
-  config.model  Classifying do
-    visible false
-
-  end
-  config.model Category do
-    visible false
-    configure :services do
-      hide
-    end
-    configure :classifyings do
-      hide
-    end
   end
 end

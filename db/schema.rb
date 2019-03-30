@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_25_033256) do
+ActiveRecord::Schema.define(version: 2019_03_23_020818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,18 +29,10 @@ ActiveRecord::Schema.define(version: 2019_03_25_033256) do
 
   create_table "categories", id: :serial, force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "classifyings", id: :serial, force: :cascade do |t|
-    t.string "name"
     t.integer "service_id"
-    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_classifyings_on_category_id"
-    t.index ["service_id"], name: "index_classifyings_on_service_id"
+    t.index ["service_id"], name: "index_categories_on_service_id"
   end
 
   create_table "contracts", id: :serial, force: :cascade do |t|
@@ -81,15 +73,23 @@ ActiveRecord::Schema.define(version: 2019_03_25_033256) do
     t.time "day_last"
     t.time "hour_first"
     t.time "hour_last"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_services_on_user_id"
+    t.integer "category_id"
+  end
+
+  create_table "user_services", id: :serial, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id"], name: "index_user_services_on_service_id"
+    t.index ["user_id"], name: "index_user_services_on_user_id"
   end
 
   create_table "users", id: :serial, force: :cascade do |t|
     t.string "full_name"
-    t.integer "gender"
+    t.string "gender"
     t.date "date_of_birth"
     t.string "cpf"
     t.integer "role"
@@ -105,11 +105,11 @@ ActiveRecord::Schema.define(version: 2019_03_25_033256) do
   end
 
   add_foreign_key "addresses", "users"
-  add_foreign_key "classifyings", "categories"
-  add_foreign_key "classifyings", "services"
+  add_foreign_key "categories", "services"
   add_foreign_key "contracts", "payments"
   add_foreign_key "contracts", "services"
   add_foreign_key "contracts", "users"
   add_foreign_key "phones", "users"
-  add_foreign_key "services", "users"
+  add_foreign_key "user_services", "services"
+  add_foreign_key "user_services", "users"
 end

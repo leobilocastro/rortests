@@ -1,22 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
 import '../src/landing-page.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
 
 const ilside = {
   float: 'rigth',
@@ -38,8 +22,8 @@ class Main extends React.Component {
                     
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="intro-message">
-                                <h3>Contrate ou ofereça serviços</h3>
+                               <div className="intro-message">
+                                 <h3>Contrate ou ofereça serviços</h3>
                                     <ul>
                                         <li style={ilside}><a href="/#foo" className="btn btn-default btn-lg"> <span style={{backgroundColor: 'yellow', fontSize: 1.35 + "em"}} className="network-name text-black">OFERECER SERVIÇO</span></a>
                                         </li>
