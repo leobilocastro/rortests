@@ -17,17 +17,17 @@ class Footer extends React.Component {
           <div>
   <div style={{float: 'left', width: 400}}><ul className="faca-parte">
         <h3 className="titulo-footer">Institucional</h3>
-                <li> <a href="como-funciona-p24.html" style={{color: 'white'}}>Como Funciona</a> </li>
-                <li> <a href="termos-de-uso-p25.html" style={{color: 'white'}}>Termos de Uso</a> </li>
-                <li> <a href="sobre-nos-p27.html" style={{color: 'white'}}>Sobre nós</a> </li>
-                <li> <a href="contact.html" style={{color: 'white'}}>
+                <li> <a href="/home/funciona" style={{color: 'white'}}>Como Funciona</a> </li>
+                <li> <a href="/home/termo" style={{color: 'white'}}>Termos de Uso</a> </li>
+                <li> <a href="/home/sobre" style={{color: 'white'}}>Sobre nós</a> </li>
+                <li> <a href="/home/contato" style={{color: 'white'}}>
           Contato          </a> </li>
               </ul></div>
   <div style={{float: 'left', width: 400}}><ul className="institucional">
         <h3 classNme="titulo-footer">Faça Parte</h3>
-                        <li> <a href="user/login.html" style={{color: 'white'}}>
+                        <li> <a href="/users/sign_up" style={{color: 'white'}}>
           Entrar          </a></li>
-                <li> <a href="user/register.html" style={{color: 'white'}}>
+                <li> <a href="/users/sign_in" style={{color: 'white'}}>
           Registrar uma conta gratuita          </a> </li>
                                 </ul></div>
   <div style={{float: 'left', width: 400}}><ul className="social-net">
