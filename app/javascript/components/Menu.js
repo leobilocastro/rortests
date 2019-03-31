@@ -48,7 +48,7 @@ class Menu extends React.Component {
         return (
             <React.Fragment>
             <div style={layout}>
-                <div><a href="/home/index"><img border="0" alt="Hsdx" style={style} src="/img/logo.png"/></a></div> 
+                <div><a href="/"><img border="0" alt="Hsdx" style={style} src="/img/logo.png"/></a></div> 
                 <div style={divStyle}>
                     <Navbar color="light" light expand="md">
                     <NavbarBrand href="/home/funciona">COMO FUNCIONA</NavbarBrand>

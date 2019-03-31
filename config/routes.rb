@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'home/termos'
   get 'home/sobre'
   get 'home/contato'
+  get '/users/index'
   
   root to: 'home#index'
   namespace 'api' do
