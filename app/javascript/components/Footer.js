@@ -12,7 +12,7 @@ class Footer extends React.Component {
  render() {
    return (
     <React.Fragment>
-        <div style={{backgroundColor: 'gray',height: '245px', marginTop:'5px', padding: '20px'}}>
+        <div style={{backgroundColor: 'DimGray',height: '245px', marginTop:'5px', padding: '20px'}}>
         
           <div>
   <div style={{float: 'left', width: 400}}><ul className="faca-parte">
@@ -24,7 +24,7 @@ class Footer extends React.Component {
           Contato          </a> </li>
               </ul></div>
   <div style={{float: 'left', width: 400}}><ul className="institucional">
-        <h3 style={{color: 'white'}} classNme="titulo-footer">Faça Parte</h3>
+        <h3 style={{color: 'white'}} className="titulo-footer">Faça Parte</h3>
                         <li> <a href="/users/sign_up" style={{color: 'white'}}>
           Entrar          </a></li>
                 <li> <a href="/users/sign_in" style={{color: 'white'}}>

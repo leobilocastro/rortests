@@ -20,4 +20,8 @@ class HomeController < ApplicationController
   def login
   end
 
+  def cadprest
+  end
+
+
 end

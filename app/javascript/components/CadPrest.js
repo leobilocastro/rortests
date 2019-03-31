@@ -1,14 +1,14 @@
 import React from 'react'
 import '../src/landing-page.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import axios from 'axios';
 
     
 class Contato extends React.Component{
 
     constructor(props) {
         super(props);
-        this.state = {nome: '',phone: '',password:''};
+        this.state = {name: '',phone: '',password:''};
     
         this.handleChangeNome = this.handleChangeNome.bind(this);
         this.handleChangePhone = this.handleChangePhone.bind(this);
@@ -18,7 +18,7 @@ class Contato extends React.Component{
       }
     
       handleChangeNome(event) {
-        this.setState({nome: event.target.value});
+        this.setState({name: event.target.value});
       }
 
       handleChangePhone(event) {
@@ -30,8 +30,17 @@ class Contato extends React.Component{
       }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.nome+this.state.phone+this.state.password);
-        
+        axios.post( '/api/v1/users/new', { user: {name, phone,password} })
+      .then(response => {
+          console.log(response)
+          const lists = [ ...this.state.lists, response.data ]
+          this.setState({lists})
+      })
+      .catch(error => {
+          console.log(error)
+      })
+        alert('A name was submitted: ' + this.state.name+this.state.phone+this.state.password);
+        event.preventDefault();
       }
 
     render(){
@@ -41,7 +50,7 @@ class Contato extends React.Component{
               <form onSubmit={this.handleSubmit}>
                     <label>
                      Nome:
-                     <input value={this.state.nome} onChange={this.handleChangeNome} type="text" name="name" />
+                     <input value={this.state.name} onChange={this.handleChangeNome} type="text" name="name" />
                     </label>
                     <label>
                      Telefone Waths App:

@@ -5,11 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const ilside = {
   float: 'rigth',
   display: 'inline-block',
-  margin:  '20px',
-  fontSize: '20px',
-  
-
-}
+  margin:  '10px',
+ }
     
 class Main extends React.Component {
 
@@ -60,9 +57,9 @@ class Main extends React.Component {
                                <div className="intro-message">
                                  <h2 style={{color: 'white'}}>Contrate ou ofereça serviços</h2>
                                     <ul>
-                                        <li style={ilside}><a href="/users/index" className="btn btn-default btn-lg"> <span style={{backgroundColor: 'yellow', fontSize: 1.55 + "em"}} className="network-name text-black">OFERECER SERVIÇO</span></a>
+                                        <li style={ilside}><a href="/home/cadprest" className="btn btn-success"> OFERECER SERVIÇO</a>
                                         </li>
-                                        <li style={ilside}><a href="/#foo" className="btn btn-default btn-lg"> <span style={{backgroundColor: 'yellow',fontSize: 1.55 + "em"}} className="network-name text-black">CONTRATAR SERVIÇO</span></a>
+                                        <li style={ilside}><a href="/#foo" className="btn btn-success">CONTRATAR SERVIÇO</a>
                                         </li>
                                         
                                     </ul>
