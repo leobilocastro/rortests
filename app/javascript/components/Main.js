@@ -54,7 +54,7 @@ class Main extends React.Component {
                     
                         <div className="row">
                             <div className="col-lg-12">
-                               <div className="intro-message">
+                               <div >
                                  <h2 style={{color: 'white'}}>Contrate ou ofereça serviços</h2>
                                     <ul>
                                         <li style={ilside}><a href="/home/cadprest" className="btn btn-success"> OFERECER SERVIÇO</a>

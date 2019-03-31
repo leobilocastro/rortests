@@ -2,12 +2,15 @@ import React from 'react'
 import '../src/landing-page.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import {Button} from 'reactstrap';
+
 
     
-class Contato extends React.Component{
+class CadPrest extends React.Component{
 
     constructor(props) {
         super(props);
+        
         this.state = {name: '',phone: '',password:''};
     
         this.handleChangeNome = this.handleChangeNome.bind(this);
@@ -19,6 +22,7 @@ class Contato extends React.Component{
     
       handleChangeNome(event) {
         this.setState({name: event.target.value});
+        
       }
 
       handleChangePhone(event) {
@@ -30,11 +34,10 @@ class Contato extends React.Component{
       }
 
     handleSubmit(event) {
-        axios.post( '/api/v1/users/new', { user: {name, phone,password} })
+        axios.post( '/api/v1/prestador/', { prestador: {name: this.state.name, phone: this.state.phone} })
       .then(response => {
           console.log(response)
-          const lists = [ ...this.state.lists, response.data ]
-          this.setState({lists})
+         
       })
       .catch(error => {
           console.log(error)
@@ -47,7 +50,7 @@ class Contato extends React.Component{
         return (
            <React.Fragment>
             <div style={{height: '375px', marginTop:'5px'}}>
-              <form onSubmit={this.handleSubmit}>
+              <div>
                     <label>
                      Nome:
                      <input value={this.state.name} onChange={this.handleChangeNome} type="text" name="name" />
@@ -60,8 +63,10 @@ class Contato extends React.Component{
                      Senha
                      <input value={this.state.password} onChange={this.handleChangePassword} type="text" name="senha" />
                     </label>
-                     <input type="submit" value="Cadastrar" />
-              </form>
+                    <Button className="btn btn-default" onClick={this.handleSubmit}>
+                      Cadastrar
+                     </Button>
+              </div>
             </div>
          
            </React.Fragment>
@@ -70,4 +75,4 @@ class Contato extends React.Component{
 }   
 
 
- export default Contato
+ export default CadPrest

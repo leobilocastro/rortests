@@ -7,7 +7,7 @@ module Api
             end
 
             def create
-                @prestador = Prestador.new(prestador_params)
+                @prestador = Prestador.new(prestador_param)
   
                 if @prestador.save
                   render json: @prestador, status: :created
@@ -17,7 +17,7 @@ module Api
             end
 
             def prestador_param
-                params.require(:prestador).permit(:name, :phone, :password)
+                params.require(:prestador).permit(:name, :phone, :password, :street, :num, :cep, :bairro, :city, :uf)
             end
         end
     end
