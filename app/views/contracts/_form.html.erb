@@ -1,0 +1,33 @@
+<%= form_for(contract) do |f| %>
+  <% if contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
+
+      <ul>
+      <% contract.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start_time %>
+    <%= f.datetime_select :start_time %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :observations %>
+    <%= f.text_area :observations %>
+  </div>
+
+  <div class="field">
+    <%= f.label :recurring %>
+    <%= f.select_recurring   :recurring %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

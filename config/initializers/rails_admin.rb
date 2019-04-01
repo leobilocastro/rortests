@@ -24,7 +24,7 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
-
+=begin
   config.model User do
     list do
       field :full_name
@@ -102,7 +102,6 @@ RailsAdmin.config do |config|
     end
 
   end
-
   config.model Contract do
     [:user, :service, :date, :start_time,:end_time, :classifyings].each do |sym|
       configure sym.to_sym do
@@ -116,7 +115,6 @@ RailsAdmin.config do |config|
       hide
     end
   end
-
   config.model  Classifying do
     visible false
 
@@ -130,4 +128,5 @@ RailsAdmin.config do |config|
       hide
     end
   end
+=end
 end

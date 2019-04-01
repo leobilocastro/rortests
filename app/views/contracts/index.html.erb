@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%=Date.today%></h1>
+
+
+
+<%= week_calendar events: @calendar_contracts do |day, contracts| %>
+  <div><strong><%= day.to_s(:long) %></strong></div>
+  <% contracts.each do |contract| %>
+    <div>
+      <%= link_to contract.observations, contract_path(contract.id)%>
+    </div>
+  <% end %>
+<% end %>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Start time</th>
+      <th>Completed</th>
+      <th>Observations</th>
+      <th>Price</th>
+      <th>Recurring</th>
+      <th>User</th>
+      <th>Payment</th>
+      <th>Service</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contracts.each do |contract| %>
+      <tr>
+        <td><%= contract.start_time %></td>
+        <td><%= contract.completed %></td>
+        <td><%= contract.observations %></td>
+        <td><%= contract.recurring %></td>
+        <td><%= contract.user %></td>
+        <td><%= contract.payment %></td>
+        <td><%= contract.service %></td>
+        <td><%= link_to 'Show', contract %></td>
+        <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
+        <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contract', new_contract_path %>

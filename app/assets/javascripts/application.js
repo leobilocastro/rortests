@@ -10,8 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require recurring_select
 //= require jquery
 //= require jquery_ujs
+//= require recurring_select
 //= require turbolinks
 //= require_tree .

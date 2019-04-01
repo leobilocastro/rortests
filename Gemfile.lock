@@ -230,7 +230,7 @@ DEPENDENCIES
   devise
   ice_cube (~> 0.16.3)
   jbuilder (~> 2.5)
-  jquery-rails
+  jquery-rails (~> 4.3, >= 4.3.3)
   listen (~> 3.0.5)
   pg (~> 0.18)
   puma (~> 3.0)

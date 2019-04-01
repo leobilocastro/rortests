@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: 2019-03-22
+  start_time: 2019-03-31 01:42:03
   completed: false
-  observations: 
-  payment: one
+  observations: MyText
+  price: 
+  recurring: MyText
   user: one
+  payment: one
   service: one
-  end_time: 2019-03-22 18:19:48
-  start_time: 2019-03-22 18:19:48
 
 two:
-  date: 2019-03-22
+  start_time: 2019-03-31 01:42:03
   completed: false
-  observations: 
-  payment: two
+  observations: MyText
+  price: 
+  recurring: MyText
   user: two
+  payment: two
   service: two
-  end_time: 2019-03-22 18:19:48
-  start_time: 2019-03-22 18:19:48

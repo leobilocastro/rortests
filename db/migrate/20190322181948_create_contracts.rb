@@ -1,14 +1,13 @@
 class CreateContracts < ActiveRecord::Migration[5.0]
   def change
     create_table :contracts do |t|
-      t.date :date
+      t.datetime :start_time
       t.boolean :completed
-      t.string :observations
-      t.references :payment, foreign_key: true
+      t.text :observations
+      t.text :recurring
       t.references :user, foreign_key: true
+      t.references :payment, foreign_key: true
       t.references :service, foreign_key: true
-      t.time :end_time
-      t.time :start_time
 
       t.timestamps
     end
