@@ -1,4 +1,4 @@
+//= require recurring_select/pt-BR
 //= link_tree ../images
 //= link_directory ../javascripts .js
 //= link_directory ../stylesheets .css
-//= require recurring_select/fr
