@@ -1,3 +1,17 @@
+<%- 
+  require 'mercadopago.rb'
+  mp = MercadoPago.new(ENV['MERCADO_PAGO_CLIENT_ID'] , ENV['MERCADO_PAGO_CLIENT_SECRET'])
+-%>
+<script type="text/javascript">
+function execute_month_onreturn (json) {
+  console.log(json);  
+
+}
+
+</script>
+
+<strong> key: <%= ENV['MERCADO_PAGO_CLIENT_ID'] %> </strong>
+
 <%= form_for(contract) do |f| %>
   <% if contract.errors.any? %>
     <div id="error_explanation">
@@ -24,10 +38,21 @@
 
   <div class="field">
     <%= f.label :recurring %>
-    <%= f.select_recurring   :recurring %>
+    <%= f.select_recurring   :recurring,[
+      IceCube::Rule.monthly.until(Date.today + 90)
+    ]
+    %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <% if mp != nil %>
+      <dl class="dl-horizontal">
+        <dt><a href="<%= mp.create_preference({"items" => ["title"=>"oi", "quantity"=>1, "unit_price"=>10, "currency_id"=>"BRL"]})['response']['sandbox_init_point'].to_s %>" name="MP-Checkout" class="blue-rn-m" onreturn="execute_month_onreturn"><%= t '.subscribe_month', :default => t("helpers.links.subscribe_month") %></a></dt>
+         <dd><%= 10 %></dd> 
+      </dl>
+    <% end %>
+
+    <%= f.submit%>
 <% end %>
+
+
+  

@@ -9,10 +9,11 @@ end
 gem 'rails_admin', '~> 1.3'
 gem 'devise' 
 gem "rails_admin_simple_has_many"
-gem 'recurring_select', '~> 2.1'
 gem 'ice_cube', '~> 0.16.3'
 gem 'simple_calendar', '~> 2.3'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'mercadopago-sdk'
+gem 'figaro'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

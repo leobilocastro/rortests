@@ -1,0 +1,2 @@
+class ContractPaymentsController < ApplicationController
+end

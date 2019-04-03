@@ -52377,3 +52377,1960 @@ Processing by ContractsController#index as HTML
 Completed 200 OK in 94ms (Views: 72.3ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 13:37:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (11.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.7.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.7.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(857913178245985260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateContractPayments (20190402161353)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (49.3ms)[0m  [1m[35mCREATE TABLE "contract_payments" ("id" serial primary key, "payment_id" integer, "preference" text, "method" character varying, "status" integer, "contract_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_bf23972d70"
+FOREIGN KEY ("contract_id")
+  REFERENCES "contracts" ("id")
+)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_contract_payments_on_contract_id" ON "contract_payments"  ("contract_id")[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190402161353"]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(857913178245985260)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 14:26:55 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (5.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (67.1ms)
+  Rendered contracts/index.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 5148ms (Views: 4955.7ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/contracts/new" for 127.0.0.1 at 2019-04-02 14:44:38 -0300
+Processing by ContractsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: service_id):
+  
+app/controllers/contracts_controller.rb:20:in `new'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.1ms)
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 14:44:41 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (1.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.0ms)
+  Rendered contracts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 108ms (Views: 76.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-02 14:44:47 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-04-02 14:44:50 -0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (3.3ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered services/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 99ms (Views: 86.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-04-02 14:44:54 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 86ms (Views: 76.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 14:44:56 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (32.6ms)
+  Rendered contracts/new.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 91ms (Views: 86.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 14:45:01 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 14:45:02 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 15:48:20 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 15:48:21 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 15:48:21 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 15:48:22 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 15:48:23 -0300
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 15:48:40 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (1.8ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (6.2ms)
+  Rendered contracts/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 107ms (Views: 83.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 15:52:09 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (70.4ms)
+  Rendered contracts/new.html.erb within layouts/application (71.9ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::ClienteEspecial):
+    35: 
+    36:     <% if mp != nil %>
+    37:       <dl class="dl-horizontal">
+    38:         <dt><a href="<%= mp.create_preference({"items" => ["title"=>t("helpers.links.subscribe_month"), "quantity"=>1, "unit_price"=>ClienteEspecial::MONTHLY_PRICE, "currency_id"=>"VEN"]})['response']['init_point'].to_s %>" name="MP-Checkout" class="blue-rn-m" onreturn="execute_month_onreturn"><%= t '.subscribe_month', :default => t("helpers.links.subscribe_month") %></a></dt>
+    39:          <dd><%= 10 %></dd> 
+    40:       </dl>
+    41:     <% end %>
+  
+app/views/contracts/_form.html.erb:38:in `block in _app_views_contracts__form_html_erb___3124571718033080054_70352676321460'
+app/views/contracts/_form.html.erb:7:in `_app_views_contracts__form_html_erb___3124571718033080054_70352676321460'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__2820700376416720514_70352676256400'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.7ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 15:52:31 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (842.7ms)
+  Rendered contracts/new.html.erb within layouts/application (844.3ms)
+Completed 200 OK in 899ms (Views: 896.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 15:52:39 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (781.5ms)
+  Rendered contracts/new.html.erb within layouts/application (783.7ms)
+Completed 200 OK in 851ms (Views: 847.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 15:52:47 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (894.4ms)
+  Rendered contracts/new.html.erb within layouts/application (902.2ms)
+Completed 200 OK in 973ms (Views: 959.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 15:53:17 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (769.7ms)
+  Rendered contracts/new.html.erb within layouts/application (771.1ms)
+Completed 200 OK in 836ms (Views: 831.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 15:53:21 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1405.6ms)
+  Rendered contracts/new.html.erb within layouts/application (1407.6ms)
+Completed 200 OK in 1468ms (Views: 1464.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:02:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (912.5ms)
+  Rendered contracts/new.html.erb within layouts/application (915.6ms)
+Completed 200 OK in 1504ms (Views: 1449.4ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:02:06 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (746.6ms)
+  Rendered contracts/new.html.erb within layouts/application (748.0ms)
+Completed 200 OK in 817ms (Views: 810.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:02:13 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (759.0ms)
+  Rendered contracts/new.html.erb within layouts/application (762.3ms)
+Completed 200 OK in 825ms (Views: 820.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:02:51 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1436.6ms)
+  Rendered contracts/new.html.erb within layouts/application (1438.3ms)
+Completed 200 OK in 1513ms (Views: 1508.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:03:17 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (848.1ms)
+  Rendered contracts/new.html.erb within layouts/application (849.3ms)
+Completed 200 OK in 896ms (Views: 893.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:03:20 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:03:21 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1442.0ms)
+  Rendered contracts/new.html.erb within layouts/application (1443.6ms)
+Completed 200 OK in 1501ms (Views: 1497.7ms | ActiveRecord: 0.6ms)
+
+
+  Rendered contracts/_form.html.erb (1605.9ms)
+  Rendered contracts/new.html.erb within layouts/application (1608.0ms)
+Completed 200 OK in 1690ms (Views: 1685.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:26:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (893.4ms)
+  Rendered contracts/new.html.erb within layouts/application (895.6ms)
+Completed 200 OK in 1476ms (Views: 1425.9ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:26:19 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (772.4ms)
+  Rendered contracts/new.html.erb within layouts/application (773.9ms)
+Completed 200 OK in 833ms (Views: 829.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:27:23 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (838.4ms)
+  Rendered contracts/new.html.erb within layouts/application (839.9ms)
+Completed 200 OK in 894ms (Views: 891.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:27:24 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (821.9ms)
+  Rendered contracts/new.html.erb within layouts/application (824.7ms)
+Completed 200 OK in 910ms (Views: 906.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:27:33 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (766.1ms)
+  Rendered contracts/new.html.erb within layouts/application (767.6ms)
+Completed 200 OK in 818ms (Views: 813.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:29:51 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:29:52 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (907.6ms)
+  Rendered contracts/new.html.erb within layouts/application (910.8ms)
+Completed 200 OK in 1447ms (Views: 1396.3ms | ActiveRecord: 8.3ms)
+
+
+  Rendered contracts/_form.html.erb (817.4ms)
+  Rendered contracts/new.html.erb within layouts/application (818.8ms)
+Completed 200 OK in 880ms (Views: 875.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:29:54 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (892.1ms)
+  Rendered contracts/new.html.erb within layouts/application (894.1ms)
+Completed 200 OK in 950ms (Views: 947.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:31:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (2358.5ms)
+  Rendered contracts/new.html.erb within layouts/application (2360.8ms)
+Completed 200 OK in 2920ms (Views: 2869.8ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:36:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (2300.3ms)
+  Rendered contracts/new.html.erb within layouts/application (2303.6ms)
+Completed 200 OK in 2879ms (Views: 2826.0ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:41:36 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1733.4ms)
+  Rendered contracts/new.html.erb within layouts/application (1735.4ms)
+Completed 200 OK in 1791ms (Views: 1787.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-02 16:49:35 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 24ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-04-02 16:49:43 -0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (1.0ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered services/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 152ms (Views: 117.8ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/services/2" for 127.0.0.1 at 2019-04-02 16:49:45 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered services/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 109ms (Views: 95.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/contracts/new?service_id=2" for 127.0.0.1 at 2019-04-02 16:49:47 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1771.9ms)
+  Rendered contracts/new.html.erb within layouts/application (1775.2ms)
+Completed 200 OK in 1835ms (Views: 1831.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-02 16:52:00 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-04-02 16:52:03 -0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered services/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 72ms (Views: 66.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-04-02 16:52:05 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 68ms (Views: 62.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:52:06 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1688.9ms)
+  Rendered contracts/new.html.erb within layouts/application (1690.6ms)
+Completed 200 OK in 1752ms (Views: 1747.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-02 16:54:05 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-04-02 16:56:43 -0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered services/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 70ms (Views: 65.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-04-02 16:56:44 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 74ms (Views: 69.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:56:46 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1.3ms)
+  Rendered contracts/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/wypr/Área de Trabalho/from_scratch/projeto01/app/views/contracts/_form.html.erb:47: syntax error, unexpected ',', expecting ')'
+...ze;@output_buffer.append=('Oi', :default => "Oi" );@output_b...
+...                              ^):
+  
+app/views/contracts/_form.html.erb:47: syntax error, unexpected ',', expecting ')'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994526134360'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.1ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:57:19 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1.1ms)
+  Rendered contracts/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/wypr/Área de Trabalho/from_scratch/projeto01/app/views/contracts/_form.html.erb:47: syntax error, unexpected ',', expecting ')'
+...ze;@output_buffer.append=("oi", :default => "oi" );@output_b...
+...                              ^):
+  
+app/views/contracts/_form.html.erb:47: syntax error, unexpected ',', expecting ')'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994526071720'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.4ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 16:57:29 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1662.9ms)
+  Rendered contracts/new.html.erb within layouts/application (1664.3ms)
+Completed 200 OK in 1773ms (Views: 1770.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 17:18:48 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (6.3ms)
+  Rendered contracts/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 112ms (Views: 67.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contracts/2" for 127.0.0.1 at 2019-04-02 17:18:52 -0300
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.9ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contracts/show.html.erb within layouts/application
+  Rendered contracts/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 84ms (Views: 66.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 17:18:53 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.7ms)
+  Rendered contracts/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 101ms (Views: 77.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-04-02 17:18:56 -0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (2.5ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered services/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 80ms (Views: 73.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/services/1" for 127.0.0.1 at 2019-04-02 17:18:58 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 53.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:18:59 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1709.7ms)
+  Rendered contracts/new.html.erb within layouts/application (1711.4ms)
+Completed 200 OK in 1768ms (Views: 1764.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:22:43 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (2181.5ms)
+  Rendered contracts/new.html.erb within layouts/application (2182.8ms)
+Completed 200 OK in 2262ms (Views: 2258.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:23:03 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1678.4ms)
+  Rendered contracts/new.html.erb within layouts/application (1680.1ms)
+Completed 200 OK in 1749ms (Views: 1744.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:23:39 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:23:40 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:23:41 -0300
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:25:54 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1647.3ms)
+  Rendered contracts/new.html.erb within layouts/application (1649.6ms)
+Completed 200 OK in 1703ms (Views: 1700.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:26:00 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:26:01 -0300
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:26:48 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (5.9ms)
+  Rendered contracts/new.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Invalid rule type):
+    38: 
+    39:   <div class="field">
+    40:     <%= f.label :recurring %>
+    41:     <%= f.select_recurring   :recurring,[
+    42:       until: Time.now.months_since(3)
+    43:     ]%>
+    44:   </div>
+  
+app/views/contracts/_form.html.erb:41:in `block in _app_views_contracts__form_html_erb___2587014490583102209_69994530680640'
+app/views/contracts/_form.html.erb:15:in `_app_views_contracts__form_html_erb___2587014490583102209_69994530680640'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994530630520'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+Started GET "/" for 127.0.0.1 at 2019-04-02 17:27:07 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 17:30:18 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.7ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.0ms)
+  Rendered contracts/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 89ms (Views: 67.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/contracts/new" for 127.0.0.1 at 2019-04-02 17:30:20 -0300
+Processing by ContractsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: service_id):
+  
+app/controllers/contracts_controller.rb:20:in `new'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.7ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:30:27 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (7.3ms)
+  Rendered contracts/new.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    38: 
+    39:   <div class="field">
+    40:     <%= f.label :recurring %>
+    41:     <%= f.select_recurring   :recurring,nil, [until: Time.now.month(3)]%>
+    42:   </div>
+    43: 
+    44:     <% if mp != nil %>
+  
+app/views/contracts/_form.html.erb:41:in `month'
+app/views/contracts/_form.html.erb:41:in `block in _app_views_contracts__form_html_erb___2587014490583102209_69994517769180'
+app/views/contracts/_form.html.erb:15:in `_app_views_contracts__form_html_erb___2587014490583102209_69994517769180'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994517350160'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.8ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.7ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:42:22 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (7.4ms)
+  Rendered contracts/new.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `Monthly' for IceCube::Rule:Class):
+    39:   <div class="field">
+    40:     <%= f.label :recurring %>
+    41:     <%= f.select_recurring   :recurring,nil, [
+    42:       IceCube::Rule.Monthly.until(Date.today + 90)
+    43:     ]%>
+    44:   </div>
+    45: 
+  
+app/views/contracts/_form.html.erb:42:in `block in _app_views_contracts__form_html_erb___2587014490583102209_69994521209080'
+app/views/contracts/_form.html.erb:15:in `_app_views_contracts__form_html_erb___2587014490583102209_69994521209080'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994521104880'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (22.7ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.9ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:42:37 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (8.2ms)
+  Rendered contracts/new.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for #<Array:0x00007f51bdd1f928>):
+    38: 
+    39:   <div class="field">
+    40:     <%= f.label :recurring %>
+    41:     <%= f.select_recurring   :recurring,nil, [
+    42:       IceCube::Rule.monthly.until(Date.today + 90)
+    43:     ]%>
+    44:   </div>
+  
+app/views/contracts/_form.html.erb:41:in `block in _app_views_contracts__form_html_erb___2587014490583102209_69994525118020'
+app/views/contracts/_form.html.erb:15:in `_app_views_contracts__form_html_erb___2587014490583102209_69994525118020'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994525076300'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.6ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:42:52 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1.2ms)
+  Rendered contracts/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/wypr/Área de Trabalho/from_scratch/projeto01/app/views/contracts/_form.html.erb:43: syntax error, unexpected '\n', expecting =>
+/home/wypr/Área de Trabalho/from_scratch/projeto01/app/views/contracts/_form.html.erb:53: syntax error, unexpected end, expecting ')'
+ end 
+ ^~~
+/home/wypr/Área de Trabalho/from_scratch/projeto01/app/views/contracts/_form.html.erb:58: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/wypr/Área de Trabalho/from_scratch/projeto01/app/views/contracts/_form.html.erb:60: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/contracts/_form.html.erb:43: syntax error, unexpected '\n', expecting =>
+app/views/contracts/_form.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/contracts/_form.html.erb:58: syntax error, unexpected ensure, expecting ')'
+app/views/contracts/_form.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994525094900'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.2ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:43:02 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (6.3ms)
+  Rendered contracts/new.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for #<IceCube::MonthlyRule:0x00007f51bdd411b8>):
+    38: 
+    39:   <div class="field">
+    40:     <%= f.label :recurring %>
+    41:     <%= f.select_recurring   :recurring,nil, 
+    42:       IceCube::Rule.monthly.until(Date.today + 90)
+    43:     %>
+    44:   </div>
+  
+app/views/contracts/_form.html.erb:41:in `block in _app_views_contracts__form_html_erb___2587014490583102209_69994525334740'
+app/views/contracts/_form.html.erb:15:in `_app_views_contracts__form_html_erb___2587014490583102209_69994525334740'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994525101360'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.6ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:43:25 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (6.4ms)
+  Rendered contracts/new.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `collect' for #<IceCube::MonthlyRule:0x00007f51bdd53e58>):
+    38: 
+    39:   <div class="field">
+    40:     <%= f.label :recurring %>
+    41:     <%= f.select_recurring   :recurring, 
+    42:       IceCube::Rule.monthly.until(Date.today + 90)
+    43:     %>
+    44:   </div>
+  
+app/views/contracts/_form.html.erb:41:in `block in _app_views_contracts__form_html_erb___2587014490583102209_69994525370840'
+app/views/contracts/_form.html.erb:15:in `_app_views_contracts__form_html_erb___2587014490583102209_69994525370840'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994525137340'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.0ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:43:34 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1993.6ms)
+  Rendered contracts/new.html.erb within layouts/application (1995.5ms)
+Completed 200 OK in 2050ms (Views: 2046.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:44:54 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1790.0ms)
+  Rendered contracts/new.html.erb within layouts/application (1791.3ms)
+Completed 200 OK in 1841ms (Views: 1837.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:45:03 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:45:03 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:45:05 -0300
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:46:29 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (2192.4ms)
+  Rendered contracts/new.html.erb within layouts/application (2194.5ms)
+Completed 200 OK in 2271ms (Views: 2267.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:46:41 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:46:42 -0300
+Started POST "/contracts" for 127.0.0.1 at 2019-04-02 17:47:11 -0300
+Processing by ContractsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DQTOcn+1CMxOl60SHDYJvS0bHuk/UnPzZ2NVS6K40BpjOyYhKwvMyBstyKMBB8EVM0nShuAPA3PaBDMmxuq30g==", "contract"=>{"start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"2", "start_time(4i)"=>"17", "start_time(5i)"=>"46", "observations"=>"", "recurring"=>"{"}, "commit"=>"Create Contract"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "contracts" ("start_time", "observations", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_time", "2019-04-02 17:46:00"], ["observations", ""], ["created_at", "2019-04-02 17:47:11.734531"], ["updated_at", "2019-04-02 17:47:11.734531"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/3
+Completed 302 Found in 20ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/contracts/3" for 127.0.0.1 at 2019-04-02 17:47:11 -0300
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (2.1ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering contracts/show.html.erb within layouts/application
+  Rendered contracts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 78ms (Views: 69.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 17:47:15 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (3.5ms)
+  Rendered contracts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 80ms (Views: 59.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 17:48:55 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (3.6ms)
+  Rendered contracts/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 94ms (Views: 81.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contracts/new" for 127.0.0.1 at 2019-04-02 17:48:56 -0300
+Processing by ContractsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: service_id):
+  
+app/controllers/contracts_controller.rb:20:in `new'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.0ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:48:59 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1.6ms)
+  Rendered contracts/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/home/wypr/Área de Trabalho/from_scratch/projeto01/app/views/contracts/_form.html.erb:41: syntax error, unexpected ':'
+...f.recurring_options_for_select:   :recurring,nil,options:[Ic...
+...                              ^
+/home/wypr/Área de Trabalho/from_scratch/projeto01/app/views/contracts/_form.html.erb:41: Can't assign to nil
+...ns_for_select:   :recurring,nil,options:[IceCube::Rule.month...
+...                            ^~~):
+  
+app/views/contracts/_form.html.erb:41: syntax error, unexpected ':'
+app/views/contracts/_form.html.erb:41: Can't assign to nil
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994527285120'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.3ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 17:49:40 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1725.1ms)
+  Rendered contracts/new.html.erb within layouts/application (1726.5ms)
+Completed 200 OK in 1786ms (Views: 1783.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:49:46 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:49:47 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:49:50 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 17:49:50 -0300
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 18:05:57 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (9.8ms)
+  Rendered contracts/new.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for #<Array:0x00007f51b4304b68>):
+    38: 
+    39:   <div class="field">
+    40:     <%= f.label :recurring %>
+    41:     <%= f.select_recurring :recurring,nil,[until: IceCube::Rule.monthly.until(Date.today + 90)]
+    42:     %>
+    43:   </div>
+    44: 
+  
+app/views/contracts/_form.html.erb:41:in `block in _app_views_contracts__form_html_erb___2587014490583102209_69994445920680'
+app/views/contracts/_form.html.erb:15:in `_app_views_contracts__form_html_erb___2587014490583102209_69994445920680'
+app/views/contracts/new.html.erb:3:in `_app_views_contracts_new_html_erb__934849643272475839_69994445862260'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.2ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 18:06:14 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1750.3ms)
+  Rendered contracts/new.html.erb within layouts/application (1751.4ms)
+Completed 200 OK in 1809ms (Views: 1805.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 18:06:22 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 18:06:23 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 18:06:24 -0300
+Started POST "/contracts" for 127.0.0.1 at 2019-04-02 18:06:30 -0300
+Processing by ContractsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gxi44FUT6ambwWvzmI/5cAQXjGoaW5BAM06Yzao3AVTtJ1CzAa0trc57DkKFvjHYGkVABcUG4MCOKf6gzmVmnA==", "contract"=>{"start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"2", "start_time(4i)"=>"18", "start_time(5i)"=>"06", "observations"=>"", "recurring"=>"{\"interval\":1,\"until\":null,\"count\":null,\"validations\":{\"day_of_week\":{},\"day_of_month\":[10,12,14]},\"rule_type\":\"IceCube::MonthlyRule\",\"week_start\":0}"}, "commit"=>"Create Contract"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "contracts" ("start_time", "observations", "recurring", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["start_time", "2019-04-02 18:06:00"], ["observations", ""], ["recurring", "---\n:validations:\n  :day_of_month:\n  - 10\n  - 12\n  - 14\n:rule_type: IceCube::MonthlyRule\n:interval: 1\n"], ["created_at", "2019-04-02 18:06:30.197852"], ["updated_at", "2019-04-02 18:06:30.197852"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/4
+Completed 302 Found in 19ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/contracts/4" for 127.0.0.1 at 2019-04-02 18:06:30 -0300
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.4ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering contracts/show.html.erb within layouts/application
+  Rendered contracts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 18:08:37 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.6ms)
+  Rendered contracts/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 102ms (Views: 87.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/contracts/new" for 127.0.0.1 at 2019-04-02 18:08:40 -0300
+Processing by ContractsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: service_id):
+  
+app/controllers/contracts_controller.rb:20:in `new'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 18:08:44 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1599.3ms)
+  Rendered contracts/new.html.erb within layouts/application (1601.7ms)
+Completed 200 OK in 1655ms (Views: 1651.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/contracts" for 127.0.0.1 at 2019-04-02 18:09:00 -0300
+Processing by ContractsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skEhPXrBzV6lLgQ/HgFM0IvptQI4/n329w2tM25nzOfcfsluLn8JWvCUYY4DMIR4lbt5beejDXZKasteCjWrLw==", "contract"=>{"start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"2", "start_time(4i)"=>"18", "start_time(5i)"=>"08", "observations"=>"", "recurring"=>"{\"validations\":{},\"rule_type\":\"IceCube::MonthlyRule\",\"interval\":1,\"until\":\"2019-07-01\"}"}, "commit"=>"Create Contract"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "contracts" ("start_time", "observations", "recurring", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["start_time", "2019-04-02 18:08:00"], ["observations", ""], ["recurring", "---\n:validations: {}\n:rule_type: IceCube::MonthlyRule\n:interval: 1\n:until: 2019-07-01 00:00:00.000000000 -03:00\n"], ["created_at", "2019-04-02 18:09:00.880435"], ["updated_at", "2019-04-02 18:09:00.880435"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/5
+Completed 302 Found in 19ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/contracts/5" for 127.0.0.1 at 2019-04-02 18:09:00 -0300
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering contracts/show.html.erb within layouts/application
+  Rendered contracts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 53ms (Views: 47.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 18:09:41 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (2901.1ms)
+  Rendered contracts/new.html.erb within layouts/application (2902.4ms)
+Completed 200 OK in 2975ms (Views: 2970.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-02 23:44:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (7.5ms)
+Completed 200 OK in 69ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2019-04-02 23:44:32 -0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.9ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered services/index.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 963ms (Views: 921.8ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/services/3" for 127.0.0.1 at 2019-04-02 23:44:35 -0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mService Load (0.7ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering services/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered services/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 84ms (Views: 67.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/contracts/new?service_id=3" for 127.0.0.1 at 2019-04-02 23:44:36 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (1012.3ms)
+  Rendered contracts/new.html.erb within layouts/application (1014.0ms)
+Completed 200 OK in 1142ms (Views: 1101.6ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 23:44:43 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 23:45:04 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 23:45:05 -0300
+Started POST "/contracts" for 127.0.0.1 at 2019-04-02 23:46:05 -0300
+Processing by ContractsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"upMHvCPQzTL7vgRG/8bt9FOqUUTacgGBrjM7R1RoWwrkHbVpffFSqNFIMP3jTQTYqeLr8HZm6ZZFJjnf2SAAcg==", "contract"=>{"start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"2", "start_time(4i)"=>"23", "start_time(5i)"=>"44", "observations"=>"", "recurring"=>"{"}, "commit"=>"Create Contract"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "contracts" ("start_time", "observations", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_time", "2019-04-02 23:44:00"], ["observations", ""], ["created_at", "2019-04-02 23:46:05.308231"], ["updated_at", "2019-04-02 23:46:05.308231"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/6
+Completed 302 Found in 19ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/contracts/6" for 127.0.0.1 at 2019-04-02 23:46:05 -0300
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering contracts/show.html.erb within layouts/application
+  Rendered contracts/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 152ms (Views: 142.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:46:07 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.4ms)
+  Rendered contracts/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 93ms (Views: 60.5ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/contracts/4" for 127.0.0.1 at 2019-04-02 23:46:14 -0300
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k+A26XivsAA1soN/ici5UUJQfO8JzSS4qkeWNtw6q8L93966LBF0BGAI5s6U+XH5XAKwgNaQVDgXIPBbuGjMCg==", "id"=>"4"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 23ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:46:14 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.9ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.2ms)
+  Rendered contracts/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 108ms (Views: 83.6ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/contracts/6" for 127.0.0.1 at 2019-04-02 23:46:17 -0300
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Goa1E62wckrZkTaCwivwX/xorxCIgtUeliHTKeFSyTZ0uV1A+Q62TowrUzPfGjj34jpjf1ffpZ4rRrVEhQCu/g==", "id"=>"6"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (4.5ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 18ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:46:17 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.7ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (10.1ms)
+  Rendered contracts/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 128ms (Views: 93.9ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/contracts/2" for 127.0.0.1 at 2019-04-02 23:46:20 -0300
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1idhvcnT/VzAlHKtH7gYiAArg5e8RzTKHb/m/xRTCPa4GInunW05WJUuFxwCidAgHnlP+GMaREqg2ICScAFvPg==", "id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 10ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:46:20 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (6.0ms)
+  Rendered contracts/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 90ms (Views: 77.6ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/contracts/3" for 127.0.0.1 at 2019-04-02 23:46:22 -0300
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BPzj5DtxnNUXHbxzUUqMbv+VmubCmTnzGupUpawrSK5qwwu3b89Y0UKn2cJMe0TG4cdWiR3ESXOnjTLIyHkvZg==", "id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (4.2ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 19ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:46:22 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.7ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.9ms)
+  Rendered contracts/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 118ms (Views: 104.9ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/contracts/1" for 127.0.0.1 at 2019-04-02 23:46:25 -0300
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0Db0KRZOdCWLFtV1rCR3RN+CzmLnvfZe2W7dkcUWtcC+CRx6QvCwId6ssMSxFb/swdACDTjght5kCbv8oUTSCA==", "id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 21ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:46:25 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.8ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (6.7ms)
+  Rendered contracts/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 100ms (Views: 89.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/contracts?start_date=2019-04-08" for 127.0.0.1 at 2019-04-02 23:46:33 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-04-08"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.4ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (8.0ms)
+  Rendered contracts/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 93ms (Views: 83.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contracts?start_date=2019-04-15" for 127.0.0.1 at 2019-04-02 23:46:34 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-04-15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (1.4ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (8.8ms)
+  Rendered contracts/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 109ms (Views: 92.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/contracts?start_date=2019-04-22" for 127.0.0.1 at 2019-04-02 23:46:35 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-04-22"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (10.4ms)
+  Rendered contracts/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 86ms (Views: 76.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contracts?start_date=2019-04-29" for 127.0.0.1 at 2019-04-02 23:46:35 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-04-29"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (11.8ms)
+  Rendered contracts/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 85ms (Views: 75.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/contracts?start_date=2019-05-06" for 127.0.0.1 at 2019-04-02 23:46:36 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-05-06"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.9ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.9ms)
+  Rendered contracts/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 88ms (Views: 77.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/contracts?start_date=2019-05-13" for 127.0.0.1 at 2019-04-02 23:46:36 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-05-13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (3.7ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.3ms)
+  Rendered contracts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 103ms (Views: 89.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/contracts?start_date=2019-05-20" for 127.0.0.1 at 2019-04-02 23:46:36 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-05-20"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (1.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (8.7ms)
+  Rendered contracts/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 83ms (Views: 72.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/contracts?start_date=2019-05-27" for 127.0.0.1 at 2019-04-02 23:46:37 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-05-27"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (3.4ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (7.5ms)
+  Rendered contracts/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 104ms (Views: 90.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/contracts?start_date=2019-06-03" for 127.0.0.1 at 2019-04-02 23:46:37 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-06-03"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.7ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.8ms)
+  Rendered contracts/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 88ms (Views: 76.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/contracts?start_date=2019-06-10" for 127.0.0.1 at 2019-04-02 23:46:37 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-06-10"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (1.0ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (8.5ms)
+  Rendered contracts/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 91ms (Views: 82.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/contracts?start_date=2019-06-17" for 127.0.0.1 at 2019-04-02 23:46:38 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-06-17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (10.5ms)
+  Rendered contracts/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 97ms (Views: 82.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contracts?start_date=2019-06-24" for 127.0.0.1 at 2019-04-02 23:46:38 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-06-24"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.7ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (9.3ms)
+  Rendered contracts/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 112ms (Views: 103.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/contracts?start_date=2019-07-01" for 127.0.0.1 at 2019-04-02 23:46:38 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-07-01"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.7ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (8.1ms)
+  Rendered contracts/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 101ms (Views: 88.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/contracts?start_date=2019-07-08" for 127.0.0.1 at 2019-04-02 23:46:39 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-07-08"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (9.7ms)
+  Rendered contracts/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 93ms (Views: 83.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/contracts?start_date=2019-07-15" for 127.0.0.1 at 2019-04-02 23:46:39 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-07-15"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (10.7ms)
+  Rendered contracts/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 102ms (Views: 95.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contracts?start_date=2019-07-22" for 127.0.0.1 at 2019-04-02 23:46:40 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-07-22"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (12.8ms)
+  Rendered contracts/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 85ms (Views: 76.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/contracts?start_date=2019-07-29" for 127.0.0.1 at 2019-04-02 23:46:40 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-07-29"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (9.9ms)
+  Rendered contracts/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 110ms (Views: 98.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/contracts?start_date=2019-08-05" for 127.0.0.1 at 2019-04-02 23:46:40 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-08-05"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (9.6ms)
+  Rendered contracts/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 79ms (Views: 68.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contracts?start_date=2019-08-12" for 127.0.0.1 at 2019-04-02 23:46:40 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-08-12"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (9.2ms)
+  Rendered contracts/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 104ms (Views: 96.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/contracts?start_date=2019-08-19" for 127.0.0.1 at 2019-04-02 23:46:41 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-08-19"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.8ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (11.1ms)
+  Rendered contracts/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 89ms (Views: 79.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/contracts?start_date=2019-08-26" for 127.0.0.1 at 2019-04-02 23:46:41 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-08-26"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (10.7ms)
+  Rendered contracts/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 115ms (Views: 107.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contracts?start_date=2019-09-02" for 127.0.0.1 at 2019-04-02 23:46:41 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-09-02"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (11.1ms)
+  Rendered contracts/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 91ms (Views: 78.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/contracts?start_date=2019-09-09" for 127.0.0.1 at 2019-04-02 23:46:42 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-09-09"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.7ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (11.1ms)
+  Rendered contracts/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 102ms (Views: 94.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/contracts?start_date=2019-09-16" for 127.0.0.1 at 2019-04-02 23:46:42 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-09-16"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (2.1ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (11.4ms)
+  Rendered contracts/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 101ms (Views: 88.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/contracts?start_date=2019-09-23" for 127.0.0.1 at 2019-04-02 23:46:42 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-09-23"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.8ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (13.1ms)
+  Rendered contracts/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 91ms (Views: 81.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/contracts?start_date=2019-09-30" for 127.0.0.1 at 2019-04-02 23:46:43 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-09-30"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.8ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.8ms)
+  Rendered contracts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 109ms (Views: 81.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/contracts?start_date=2019-10-07" for 127.0.0.1 at 2019-04-02 23:46:43 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-10-07"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (5.9ms)
+  Rendered contracts/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 78ms (Views: 70.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contracts?start_date=2019-10-14" for 127.0.0.1 at 2019-04-02 23:46:43 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-10-14"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (6.2ms)
+  Rendered contracts/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 99ms (Views: 92.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/contracts?start_date=2019-10-21" for 127.0.0.1 at 2019-04-02 23:46:44 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-10-21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (8.3ms)
+  Rendered contracts/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 88ms (Views: 78.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contracts?start_date=2019-10-28" for 127.0.0.1 at 2019-04-02 23:46:44 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-10-28"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (23.4ms)
+  Rendered contracts/index.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 134ms (Views: 105.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contracts?start_date=2019-11-04" for 127.0.0.1 at 2019-04-02 23:46:45 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-11-04"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.8ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (9.7ms)
+  Rendered contracts/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 87ms (Views: 76.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/contracts?start_date=2019-11-11" for 127.0.0.1 at 2019-04-02 23:46:45 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-11-11"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (4.2ms)
+  Rendered contracts/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 98ms (Views: 87.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/contracts?start_date=2019-11-18" for 127.0.0.1 at 2019-04-02 23:46:45 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-11-18"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (7.5ms)
+  Rendered contracts/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 93ms (Views: 81.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contracts?start_date=2019-11-25" for 127.0.0.1 at 2019-04-02 23:46:46 -0300
+Processing by ContractsController#index as HTML
+  Parameters: {"start_date"=>"2019-11-25"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (6.6ms)
+  Rendered contracts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 123ms (Views: 90.1ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/contracts/5" for 127.0.0.1 at 2019-04-02 23:46:50 -0300
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"I/oUgBBrezbmsLE+hurLilCVwBn/F7P/S7mImB12+plNxfzTRNW/MrMK1I+b2wMiTscMdiBKw3/23u71eSSdUQ==", "id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.4ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 10ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:46:50 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (6.0ms)
+  Rendered contracts/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 87ms (Views: 80.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/contracts/new" for 127.0.0.1 at 2019-04-02 23:46:52 -0300
+Processing by ContractsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: service_id):
+  
+app/controllers/contracts_controller.rb:20:in `new'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 23:46:55 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (810.8ms)
+  Rendered contracts/new.html.erb within layouts/application (813.0ms)
+Completed 200 OK in 885ms (Views: 879.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 23:47:14 -0300
+Started POST "/recurring_select/translate/en" for 127.0.0.1 at 2019-04-02 23:47:14 -0300
+Started POST "/contracts" for 127.0.0.1 at 2019-04-02 23:47:51 -0300
+Processing by ContractsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Jyc7nFSJ0vflEEIb7iRZOtNPgfJ9lG+mqLhQ/e/Dzi+o3S9JezjT4ouJLlyiVnM9R/yaBarIT4nxYcuk+1o8A==", "contract"=>{"start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"2", "start_time(4i)"=>"23", "start_time(5i)"=>"46", "observations"=>"", "recurring"=>"{"}, "commit"=>"Create Contract"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "contracts" ("start_time", "observations", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_time", "2019-04-02 23:46:00"], ["observations", ""], ["created_at", "2019-04-02 23:47:51.357017"], ["updated_at", "2019-04-02 23:47:51.357017"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/7
+Completed 302 Found in 15ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/contracts/7" for 127.0.0.1 at 2019-04-02 23:47:51 -0300
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.2ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering contracts/show.html.erb within layouts/application
+  Rendered contracts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:47:52 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (1.9ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (6.0ms)
+  Rendered contracts/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 82ms (Views: 75.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:47:57 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (7.4ms)
+  Rendered contracts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 95ms (Views: 89.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/contracts/new" for 127.0.0.1 at 2019-04-02 23:48:04 -0300
+Processing by ContractsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: service_id):
+  
+app/controllers/contracts_controller.rb:20:in `new'
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+Started GET "/contracts/new?service_id=1" for 127.0.0.1 at 2019-04-02 23:48:09 -0300
+Processing by ContractsController#new as HTML
+  Parameters: {"service_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contracts/new.html.erb within layouts/application
+  Rendered contracts/_form.html.erb (811.5ms)
+  Rendered contracts/new.html.erb within layouts/application (814.6ms)
+Completed 200 OK in 916ms (Views: 910.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/contracts" for 127.0.0.1 at 2019-04-02 23:48:14 -0300
+Processing by ContractsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gr0aGBotXeAE4jRTLZMexmopwraxgEzNfUsWYNuJlr/sgvJLTpOZ5FFYUeIwotZudHsO2W7dPE3ALHANv9vxdw==", "contract"=>{"start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"2", "start_time(4i)"=>"23", "start_time(5i)"=>"48", "observations"=>"", "recurring"=>"{\"validations\":{},\"rule_type\":\"IceCube::MonthlyRule\",\"interval\":1,\"until\":\"2019-07-01\"}"}, "commit"=>"Create Contract"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "contracts" ("start_time", "observations", "recurring", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["start_time", "2019-04-02 23:48:00"], ["observations", ""], ["recurring", "---\n:validations: {}\n:rule_type: IceCube::MonthlyRule\n:interval: 1\n:until: 2019-07-01 00:00:00.000000000 -03:00\n"], ["created_at", "2019-04-02 23:48:14.348874"], ["updated_at", "2019-04-02 23:48:14.348874"]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts/8
+Completed 302 Found in 24ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/contracts/8" for 127.0.0.1 at 2019-04-02 23:48:14 -0300
+Processing by ContractsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.3ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering contracts/show.html.erb within layouts/application
+  Rendered contracts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 100ms (Views: 62.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:48:18 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.5ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (8.5ms)
+  Rendered contracts/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 124ms (Views: 115.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/contracts/7" for 127.0.0.1 at 2019-04-02 23:48:23 -0300
+Processing by ContractsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GoFkM8WeiDuCdUDHrEFToe/Awc9yOsSA41enIc5XP8R0voxgkSBMP9fPJXaxcJsJ8ZINoK1ntABeMMFMqgVYDA==", "id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.6ms)[0m  [1m[34mSELECT  "contracts".* FROM "contracts" WHERE "contracts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "contracts" WHERE "contracts"."id" = $1[0m  [["id", 7]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/contracts
+Completed 302 Found in 15ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/contracts" for 127.0.0.1 at 2019-04-02 23:48:23 -0300
+Processing by ContractsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContract Load (0.4ms)[0m  [1m[34mSELECT "contracts".* FROM "contracts"[0m
+  Rendering contracts/index.html.erb within layouts/application
+  Rendered /home/wypr/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/simple_calendar-2.3.0/app/views/simple_calendar/_week_calendar.html.erb (10.4ms)
+  Rendered contracts/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 156ms (Views: 146.2ms | ActiveRecord: 1.1ms)
+
+

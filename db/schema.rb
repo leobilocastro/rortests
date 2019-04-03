@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190331014203) do
+ActiveRecord::Schema.define(version: 20190402161353) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,14 +33,15 @@ ActiveRecord::Schema.define(version: 20190331014203) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "classifyings", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "service_id"
-    t.integer  "category_id"
+  create_table "contract_payments", force: :cascade do |t|
+    t.integer  "payment_id"
+    t.text     "preference"
+    t.string   "method"
+    t.integer  "status"
+    t.integer  "contract_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["category_id"], name: "index_classifyings_on_category_id", using: :btree
-    t.index ["service_id"], name: "index_classifyings_on_service_id", using: :btree
+    t.index ["contract_id"], name: "index_contract_payments_on_contract_id", using: :btree
   end
 
   create_table "contracts", force: :cascade do |t|
@@ -56,14 +57,6 @@ ActiveRecord::Schema.define(version: 20190331014203) do
     t.index ["payment_id"], name: "index_contracts_on_payment_id", using: :btree
     t.index ["service_id"], name: "index_contracts_on_service_id", using: :btree
     t.index ["user_id"], name: "index_contracts_on_user_id", using: :btree
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "start_time"
-    t.text     "recurring"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "payments", force: :cascade do |t|
@@ -82,12 +75,8 @@ ActiveRecord::Schema.define(version: 20190331014203) do
 
   create_table "services", force: :cascade do |t|
     t.text     "description"
-    t.string   "tirtle"
+    t.string   "title"
     t.decimal  "price"
-    t.time     "day_first"
-    t.time     "day_last"
-    t.time     "hour_first"
-    t.time     "hour_last"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -112,8 +101,7 @@ ActiveRecord::Schema.define(version: 20190331014203) do
   end
 
   add_foreign_key "addresses", "users"
-  add_foreign_key "classifyings", "categories"
-  add_foreign_key "classifyings", "services"
+  add_foreign_key "contract_payments", "contracts"
   add_foreign_key "contracts", "payments"
   add_foreign_key "contracts", "services"
   add_foreign_key "contracts", "users"
