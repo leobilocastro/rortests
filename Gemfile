@@ -6,11 +6,11 @@ git_source(:github) do |repo_name|
 end
 
 #gem especias para o projeto
+gem 'rest-client'
 gem 'rails_admin', '~> 1.3'
 gem 'devise' 
 gem "rails_admin_simple_has_many"
 gem 'recurring_select'
-#gem 'recurring_select', :git => 'https://username:password@github.com/Wypr/select_recurring.git', :ref => 'master'
 gem 'ice_cube', '~> 0.16.3'
 gem 'simple_calendar', '~> 2.3'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'

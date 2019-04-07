@@ -17,7 +17,7 @@ class ContractsController < ApplicationController
   # GET /contracts/new
   def new
     @contract = Contract.new
-    @contract.service_id = params.fetch(:service_id)
+    @contract.service = Service.find(params.fetch(:service_id))
   end
 
   # GET /contracts/1/edit

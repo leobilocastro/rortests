@@ -1,43 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Start time:</strong>
-  <%= @contract.start_time %>
+  <strong>Service:</strong>
+  <%= @contract.service.title %>
 </p>
 
 <p>
-  <strong>Completed:</strong>
-  <%= @contract.completed %>
+  <strong>Start time:</strong>
+  <%= @contract.start_time.to_date.strftime('%d/%m/%Y') %>
 </p>
+
+
 
 <p>
   <strong>Observations:</strong>
   <%= @contract.observations %>
 </p>
-
-<p>
-  <strong>Recurring:</strong>
-  <%= @contract.recurring %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @contract.user %>
-</p>
-
-<p>
-  <strong>Payment:</strong>
-  <%= @contract.payment %>
-</p>
-
-<p>
-  <strong>Service:</strong>
-  <%= @contract.service %>
-</p>
-
-
-
-
-
-<%= link_to 'Edit', edit_contract_path(@contract) %> |
+ |
 <%= link_to 'Back', contracts_path %>

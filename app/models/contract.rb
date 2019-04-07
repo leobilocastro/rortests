@@ -3,10 +3,8 @@ class Contract < ApplicationRecord
   
   belongs_to :user, optional: true
   belongs_to :payment, optional: true
-  belongs_to :service, optional: true
+  belongs_to :service, inverse_of: :contracts
 
-
- 
 
   def recurring=(value)
     if RecurringSelect.is_valid_rule?(value)
@@ -36,7 +34,7 @@ class Contract < ApplicationRecord
             end_date = start.end_of_month.end_of_week
             
             schedule(start_date).occurrences(end_date).map  do  |date|
-                    Contract.new(id: id, observations: observations, start_time: date)
+                    Contract.new(id: id, observations: observations, service: service,start_time: date)
             end
         end
     end
