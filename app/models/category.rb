@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  has_many :classifyings, dependent: :destroy,  :autosave => true
-  has_many :services, through: :classifyings
+  belongs_to :tags, dependent: :destroy,  :autosave => true, inverse_of: :category
+  belongs_to :services, :autosave => true, inverse_of: :category, dependent: :destroy
 end
 
