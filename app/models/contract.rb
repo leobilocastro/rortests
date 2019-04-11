@@ -2,7 +2,7 @@ class Contract < ApplicationRecord
   serialize :recurring, Hash
   
   belongs_to :user, optional: true
-  belongs_to :payment, optional: true
+  has_one :payment, inverse_of: :contract
   belongs_to :service, inverse_of: :contracts
 
 

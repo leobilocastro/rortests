@@ -6,9 +6,7 @@ class CreateContracts < ActiveRecord::Migration[5.0]
       t.text :observations
       t.text :recurring
       t.references :user, foreign_key: true
-      t.references :payment, foreign_key: true
       t.references :service, foreign_key: true
-
       t.timestamps
     end
   end

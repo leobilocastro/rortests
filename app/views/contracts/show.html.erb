@@ -11,10 +11,23 @@
 </p>
 
 
+<p>
+  <strong>Status do pagamento:</strong>
+  <%= @contract.payment.approved ? 'Pago':'Em aberto'%>
+</p>
+
+
+
 
 <p>
   <strong>Observations:</strong>
   <%= @contract.observations %>
 </p>
- |
+
+
+<%= form_tag('/payment',method: :post ) do %>
+  <%=hidden_field_tag :quantidade%>
+  <%=hidden_field_tag :valor%>
+  <%= submit_tag "Efetuar Pagamento" %>
+<%end%>
 <%= link_to 'Back', contracts_path %>
