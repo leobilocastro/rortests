@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190411013626) do
+ActiveRecord::Schema.define(version: 20190414002344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,10 @@ ActiveRecord::Schema.define(version: 20190411013626) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "service_id"
+    t.integer  "tag_id"
+    t.index ["service_id"], name: "index_categories_on_service_id", using: :btree
+    t.index ["tag_id"], name: "index_categories_on_tag_id", using: :btree
   end
 
   create_table "contracts", force: :cascade do |t|
@@ -72,6 +76,12 @@ ActiveRecord::Schema.define(version: 20190411013626) do
     t.index ["user_id"], name: "index_services_on_user_id", using: :btree
   end
 
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "full_name"
     t.integer  "gender"
@@ -90,6 +100,8 @@ ActiveRecord::Schema.define(version: 20190411013626) do
   end
 
   add_foreign_key "addresses", "users"
+  add_foreign_key "categories", "services"
+  add_foreign_key "categories", "tags"
   add_foreign_key "contracts", "services"
   add_foreign_key "contracts", "users"
   add_foreign_key "payments", "contracts"

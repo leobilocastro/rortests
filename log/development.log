@@ -58798,3 +58798,122 @@ Processing by ContractsController#show as HTML
 Completed 200 OK in 68ms (Views: 61.3ms | ActiveRecord: 1.9ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (115.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "proj01_development"[0m
+  [1m[35m (114.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "proj01_test"[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(857913178245985260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20190319180353)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "full_name" character varying, "gender" integer, "date_of_birth" date, "cpf" character varying, "role" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190319180353"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAddresses (20190322181641)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" serial primary key, "street_name" character varying, "number" character varying, "neighborhood" character varying, "zip_code" character varying, "additional_info" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_48c9e0c5a2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_addresses_on_user_id" ON "addresses"  ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190322181641"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateServices (20190322181707)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "services" ("id" serial primary key, "description" text, "title" character varying, "price" decimal, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_51a813203f"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_services_on_user_id" ON "services"  ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190322181707"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePayments (20190322181739)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "payments" ("id" serial primary key, "approved" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190322181739"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20190322181814)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190322181814"]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateContracts (20190322181948)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE "contracts" ("id" serial primary key, "start_time" timestamp, "completed" boolean, "observations" text, "recurring" text, "user_id" integer, "service_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f191b5ed7a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_20f5e53e0c"
+FOREIGN KEY ("service_id")
+  REFERENCES "services" ("id")
+)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_contracts_on_user_id" ON "contracts"  ("user_id")[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE  INDEX  "index_contracts_on_service_id" ON "contracts"  ("service_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190322181948"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20190322194602)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.7ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (13.1ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190322194602"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePhones (20190322203145)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE "phones" ("id" serial primary key, "number" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_a63a365e43"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_phones_on_user_id" ON "phones"  ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190322203145"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddContractReferencesToPayments (20190411013626)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "payments" ADD "contract_id" integer[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_payments_on_contract_id" ON "payments"  ("contract_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "payments" ADD CONSTRAINT "fk_rails_9215ad6069"
+FOREIGN KEY ("contract_id")
+  REFERENCES "contracts" ("id")
+[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190411013626"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTags (20190411015007)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "tags" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190411015007"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddServiceReferencesToCategory (20190414002329)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "categories" ADD "service_id" integer[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_categories_on_service_id" ON "categories"  ("service_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "categories" ADD CONSTRAINT "fk_rails_db8b64c2f7"
+FOREIGN KEY ("service_id")
+  REFERENCES "services" ("id")
+[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190414002329"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTagReferencesToCategory (20190414002344)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "categories" ADD "tag_id" integer[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_categories_on_tag_id" ON "categories"  ("tag_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "categories" ADD CONSTRAINT "fk_rails_4db39a75fa"
+FOREIGN KEY ("tag_id")
+  REFERENCES "tags" ("id")
+[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190414002344"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-13 21:24:57.454165"], ["updated_at", "2019-04-13 21:24:57.454165"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(857913178245985260)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
