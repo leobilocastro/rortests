@@ -17,7 +17,23 @@ class User < ApplicationRecord
     def address_id
       self.address.try :id
     end
+
     def address_id=(id)
       self.address = Address.find_by_id(id)
     end
+    
+    after_initialize :set_default_role, :if => :new_record?
+
+    def set_default_role
+      self.role ||= :client
+    end
+    
+    rails_admin do 
+      edit do
+      field :password
+      field :password_confirmation
+      end
+    end
+  
+ 
   end

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :tags
   resources :services, only: [:new,:create, :show, :index]
   resources :contracts, only:  [:new,:create, :show, :index]
   devise_for :users
