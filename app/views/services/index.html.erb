@@ -29,4 +29,8 @@
 
 <br>
 
-<%= link_to 'New Service', new_service_path %>
+
+
+<% if can? :create, Service %>
+<%=link_to 'New Service', new_service_path %>
+<%end%>

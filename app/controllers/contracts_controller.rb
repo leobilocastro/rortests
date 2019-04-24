@@ -1,11 +1,24 @@
 class ContractsController < ApplicationController
   before_action :set_contract, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+  
+  rescue_from ActiveRecord::RecordNotFound do |exception|
+    respond_to do |format|
+      format.json { head :forbidden, content_type: 'text/html' }
+      format.html { redirect_to main_app.contracts_path, notice: exception.message }
+      format.js   { head :forbidden, content_type: 'text/html' }
+    end
+  end
 
   # GET /contracts
   # GET /contracts.json
   def index
-    @contracts = Contract.all
-    @calendar_contracts = @contracts.flat_map{|e| e.calendar_contracts(params.fetch(:start_date, Time.zone.now).to_date)}
+    if current_user.admin?
+      @contracts  = Contract.all 
+    else 
+      @contracts = Contract.where([ "user_id = ?", current_user.id ])
+    end
+    @calendar_contracts = @contracts
   
   end
 
@@ -18,6 +31,7 @@ class ContractsController < ApplicationController
   def new
     @contract = Contract.new
     @contract.service = Service.find(params.fetch(:service_id))
+    
   end
 
   # GET /contracts/1/edit
@@ -28,7 +42,7 @@ class ContractsController < ApplicationController
   # POST /contracts.json
   def create
     @contract = Contract.new(contract_params)
-
+    @contract.user = current_user
     respond_to do |format|
       if @contract.save
         payment = Payment.new

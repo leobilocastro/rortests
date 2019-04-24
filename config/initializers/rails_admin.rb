@@ -4,10 +4,13 @@ RailsAdmin.config do |config|
   ## == Devise ==
    config.authenticate_with do
      warden.authenticate! scope: :user
+     
    end
    config.current_user_method(&:current_user)
-
-
+   config.authorize_with :cancancan
+   config.parent_controller = 'ApplicationController' 
+   
+   
 
   ## == Cancan ==
   # config.authorize_with :cancan
@@ -15,9 +18,7 @@ RailsAdmin.config do |config|
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
-    new do
-      except ['Payment']
-    end
+    new 
     export
     bulk_delete
     show
@@ -52,7 +53,7 @@ RailsAdmin.config do |config|
      field :cpf
      field :phones, :simple_has_many do
       orderable true
-      required true
+
      end
      field :email do
       required  true
@@ -76,7 +77,7 @@ RailsAdmin.config do |config|
       field :date_of_birth
       field :cpf
       field :phones, :simple_has_many do
-       required true
+        orderable true
       end
       field :email do
         required true
@@ -127,14 +128,14 @@ RailsAdmin.config do |config|
       field :title
       field :description  
       field :price
-      field :user
+      field :user 
     end
 
     update do
       field :title
       field :description  
       field :price
-      field :user
+      field :user 
     end
 
   end

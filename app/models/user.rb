@@ -9,6 +9,7 @@ class User < ApplicationRecord
     has_many :phones,  dependent: :destroy
     has_many :services
 
+
     has_one :address, dependent: :destroy, inverse_of:  :user
     attr_accessor :address_attributes
     attr_accessor :address_id
@@ -34,6 +35,8 @@ class User < ApplicationRecord
       field :password_confirmation
       end
     end
-  
+    def name
+     full_name
+    end
  
   end

@@ -8,9 +8,6 @@ class Contract < ApplicationRecord
   rails_admin do 
       configure :payment do
         hide
-      end
-
-      
+      end 
   end
-
 end

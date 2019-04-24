@@ -1,5 +1,13 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+  rescue_from ActiveRecord::RecordNotFound do |exception|
+    respond_to do |format|
+      format.json { head :forbidden, content_type: 'text/html' }
+      format.html { redirect_to main_app.contracts_path, notice: exception.message }
+      format.js   { head :forbidden, content_type: 'text/html' }
+    end
+  end
 
   # GET /services
   # GET /services.json

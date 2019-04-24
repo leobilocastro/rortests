@@ -33,13 +33,6 @@
       <%= f.text_area :service_id, hidden: true %>
   </div>
   
-  <div class="field">
-    <%= f.label :recurring %>
-    <%= f.select_recurring   :recurring,[
-      IceCube::Rule.monthly.until(Date.today + 90)
-    ]
-    %>
-  </div>
     <%= f.submit%>
 <% end %>
 
