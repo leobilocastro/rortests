@@ -116,6 +116,7 @@ RailsAdmin.config do |config|
         field :title
         field :description
         field :price
+        field :categories
         field :user do
           pretty_value do
             path = bindings[:view].show_path(model_name: 'User', id: bindings[:object].user.id)
@@ -129,6 +130,7 @@ RailsAdmin.config do |config|
       field :description  
       field :price
       field :user 
+      field :categories
     end
 
     update do
@@ -136,6 +138,7 @@ RailsAdmin.config do |config|
       field :description  
       field :price
       field :user 
+      field :categories
     end
 
   end

@@ -23,7 +23,7 @@ class User < ApplicationRecord
       self.address = Address.find_by_id(id)
     end
     
-    after_initialize :set_default_role, :if => :new_record?
+    after_initialize :name, :unless => :new_record?
 
     def set_default_role
       self.role ||= :client
@@ -36,7 +36,10 @@ class User < ApplicationRecord
       end
     end
     def name
-     full_name
+      if full_name.nil?
+      email
+      else
+        full_name
+      end
     end
- 
   end

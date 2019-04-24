@@ -48,10 +48,12 @@ pt-BR:
         hour_first: Hora inicial
         hour_last: Hora final
         user: Usuário responsável
+        categories: Categorias
       payment: 
         approved: Aprovado
       category:
         name: Nome
+        services: Serviços
       contract:
         date: Data  
         completed: Finalizado 
